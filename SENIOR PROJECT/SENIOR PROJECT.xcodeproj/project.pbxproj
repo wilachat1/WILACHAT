@@ -10,11 +10,14 @@
 		F5713DB522BDCF2500068E36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5713DB422BDCF2500068E36 /* AppDelegate.swift */; };
 		F5713DB722BDCF2500068E36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5713DB622BDCF2500068E36 /* ViewController.swift */; };
 		F5713DBA22BDCF2500068E36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5713DB822BDCF2500068E36 /* Main.storyboard */; };
-		F5713DBC22BDCF2600068E36 /* F.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5713DBB22BDCF2600068E36 /* F.xcassets */; };
+		F5713DBC22BDCF2600068E36 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5713DBB22BDCF2600068E36 /* Media.xcassets */; };
 		F5713DBF22BDCF2600068E36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5713DBD22BDCF2600068E36 /* LaunchScreen.storyboard */; };
 		F5713DCA22BDCF2700068E36 /* SENIOR_PROJECTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5713DC922BDCF2700068E36 /* SENIOR_PROJECTTests.swift */; };
 		F5713DD522BDCF2700068E36 /* SENIOR_PROJECTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5713DD422BDCF2700068E36 /* SENIOR_PROJECTUITests.swift */; };
 		F5713DE322BDFB3B00068E36 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5713DE222BDFB3B00068E36 /* SuccessViewController.swift */; };
+		F5E53EAA22C72B7D00F4F8EC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E53EA922C72B7D00F4F8EC /* SettingsViewController.swift */; };
+		F5E53EAC22C7336600F4F8EC /* aboutUsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E53EAB22C7336600F4F8EC /* aboutUsTableViewController.swift */; };
+		F5E53EB022C73F7600F4F8EC /* nature1Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E53EAF22C73F7600F4F8EC /* nature1Cell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,7 @@
 		F5713DB422BDCF2500068E36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5713DB622BDCF2500068E36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F5713DB922BDCF2500068E36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F5713DBB22BDCF2600068E36 /* F.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = F.xcassets; sourceTree = "<group>"; };
+		F5713DBB22BDCF2600068E36 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		F5713DBE22BDCF2600068E36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5713DC022BDCF2700068E36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5713DC522BDCF2700068E36 /* SENIOR PROJECTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SENIOR PROJECTTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +52,9 @@
 		F5713DD422BDCF2700068E36 /* SENIOR_PROJECTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SENIOR_PROJECTUITests.swift; sourceTree = "<group>"; };
 		F5713DD622BDCF2700068E36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5713DE222BDFB3B00068E36 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
+		F5E53EA922C72B7D00F4F8EC /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F5E53EAB22C7336600F4F8EC /* aboutUsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutUsTableViewController.swift; sourceTree = "<group>"; };
+		F5E53EAF22C73F7600F4F8EC /* nature1Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nature1Cell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +108,13 @@
 				F5713DB422BDCF2500068E36 /* AppDelegate.swift */,
 				F5713DB622BDCF2500068E36 /* ViewController.swift */,
 				F5713DB822BDCF2500068E36 /* Main.storyboard */,
+				F5E53EAF22C73F7600F4F8EC /* nature1Cell.swift */,
+				F5E53EAB22C7336600F4F8EC /* aboutUsTableViewController.swift */,
 				F5713DE222BDFB3B00068E36 /* SuccessViewController.swift */,
-				F5713DBB22BDCF2600068E36 /* F.xcassets */,
-				F5713DBD22BDCF2600068E36 /* LaunchScreen.storyboard */,
+				F5713DBB22BDCF2600068E36 /* Media.xcassets */,
 				F5713DC022BDCF2700068E36 /* Info.plist */,
+				F5713DBD22BDCF2600068E36 /* LaunchScreen.storyboard */,
+				F5E53EA922C72B7D00F4F8EC /* SettingsViewController.swift */,
 			);
 			path = "SENIOR PROJECT";
 			sourceTree = "<group>";
@@ -233,7 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5713DBF22BDCF2600068E36 /* LaunchScreen.storyboard in Resources */,
-				F5713DBC22BDCF2600068E36 /* F.xcassets in Resources */,
+				F5713DBC22BDCF2600068E36 /* Media.xcassets in Resources */,
 				F5713DBA22BDCF2500068E36 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,9 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5E53EB022C73F7600F4F8EC /* nature1Cell.swift in Sources */,
 				F5713DB722BDCF2500068E36 /* ViewController.swift in Sources */,
 				F5713DE322BDFB3B00068E36 /* SuccessViewController.swift in Sources */,
 				F5713DB522BDCF2500068E36 /* AppDelegate.swift in Sources */,
+				F5E53EAC22C7336600F4F8EC /* aboutUsTableViewController.swift in Sources */,
+				F5E53EAA22C72B7D00F4F8EC /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
