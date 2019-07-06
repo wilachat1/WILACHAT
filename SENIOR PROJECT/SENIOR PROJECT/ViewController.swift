@@ -10,10 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var firstStartButton: UIButton!
+    
+    @IBOutlet weak var firstStartContainerButton: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+       firstStartButton.layer.cornerRadius = 15
+        
+        firstStartContainerButton.layer.cornerRadius = 15
     }
 
     

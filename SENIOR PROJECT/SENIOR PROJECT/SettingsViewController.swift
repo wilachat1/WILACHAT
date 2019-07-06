@@ -70,7 +70,7 @@ extension UIView {
     
     func dropShadow() {
         self.layer.masksToBounds = false
-        self.layer.shadowColor = UIColor.yellow.cgColor
+        self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOpacity = 0.5
         self.layer.shadowOffset = CGSize(width: 0, height: 5)
         self.layer.shadowRadius = 10
