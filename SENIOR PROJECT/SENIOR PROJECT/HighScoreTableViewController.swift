@@ -15,28 +15,10 @@ var color : UIColor?
 class HighScoreTableViewController: UITableViewController {
     
     
-    @IBOutlet weak var playerName: UILabel!
-    
-    
-    @IBOutlet weak var highScoreNumber: UILabel!
-    
-    @IBOutlet weak var rankingOfPlayers: UILabel!
-    
-    
-    @IBOutlet weak var imageOfPlayers: UIImageView!
-    
-    
-    let name = ["Waan","Earth","Mike","Tan","May"]
-    
-    
-    
-    
-    
-    
 
+        let name = ["Waan","Earth","Mike","Tan","May"]    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

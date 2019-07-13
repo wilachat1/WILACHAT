@@ -10,6 +10,8 @@ import UIKit
 
 class HighScoreHeaderTableViewCell: UITableViewCell {
 
+   
+    @IBOutlet weak var headerHighScore: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
