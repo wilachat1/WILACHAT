@@ -21,6 +21,9 @@
 		F5E53EAA22C72B7D00F4F8EC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E53EA922C72B7D00F4F8EC /* SettingsViewController.swift */; };
 		F5E53EAC22C7336600F4F8EC /* aboutUsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E53EAB22C7336600F4F8EC /* aboutUsTableViewController.swift */; };
 		F5E53EB022C73F7600F4F8EC /* nature1Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E53EAF22C73F7600F4F8EC /* nature1Cell.swift */; };
+		F5EA9C3822D9A9A100E54A07 /* GameplayCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EA9C3722D9A9A100E54A07 /* GameplayCollectionViewController.swift */; };
+		F5EA9C3A22D9AB5E00E54A07 /* CircleLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EA9C3922D9AB5E00E54A07 /* CircleLayout.swift */; };
+		F5EA9C3C22D9B1E700E54A07 /* RandomManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EA9C3B22D9B1E700E54A07 /* RandomManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		F5E53EA922C72B7D00F4F8EC /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F5E53EAB22C7336600F4F8EC /* aboutUsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutUsTableViewController.swift; sourceTree = "<group>"; };
 		F5E53EAF22C73F7600F4F8EC /* nature1Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nature1Cell.swift; sourceTree = "<group>"; };
+		F5EA9C3722D9A9A100E54A07 /* GameplayCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayCollectionViewController.swift; sourceTree = "<group>"; };
+		F5EA9C3922D9AB5E00E54A07 /* CircleLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleLayout.swift; sourceTree = "<group>"; };
+		F5EA9C3B22D9B1E700E54A07 /* RandomManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +130,9 @@
 				F5713DB422BDCF2500068E36 /* AppDelegate.swift */,
 				F5713DB622BDCF2500068E36 /* ViewController.swift */,
 				F5713DB822BDCF2500068E36 /* Main.storyboard */,
+				F5EA9C3722D9A9A100E54A07 /* GameplayCollectionViewController.swift */,
+				F5EA9C3B22D9B1E700E54A07 /* RandomManager.swift */,
+				F5EA9C3922D9AB5E00E54A07 /* CircleLayout.swift */,
 				F5E53EAF22C73F7600F4F8EC /* nature1Cell.swift */,
 				F5E53EAB22C7336600F4F8EC /* aboutUsTableViewController.swift */,
 				F5713DE222BDFB3B00068E36 /* SuccessViewController.swift */,
@@ -287,8 +296,11 @@
 			files = (
 				F5132D4022D052010079136B /* HighScoreHeaderViewCell.swift in Sources */,
 				F5E53EB022C73F7600F4F8EC /* nature1Cell.swift in Sources */,
+				F5EA9C3822D9A9A100E54A07 /* GameplayCollectionViewController.swift in Sources */,
+				F5EA9C3A22D9AB5E00E54A07 /* CircleLayout.swift in Sources */,
 				F5713DB722BDCF2500068E36 /* ViewController.swift in Sources */,
 				F5713DE322BDFB3B00068E36 /* SuccessViewController.swift in Sources */,
+				F5EA9C3C22D9B1E700E54A07 /* RandomManager.swift in Sources */,
 				F5713DB522BDCF2500068E36 /* AppDelegate.swift in Sources */,
 				F5132D3E22D051730079136B /* HighScoreTableViewController.swift in Sources */,
 				F5132D4222D0522D0079136B /* HighScoreNameViewCell.swift in Sources */,

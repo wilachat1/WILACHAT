@@ -87,6 +87,9 @@
                                         <state key="normal" title="START">
                                             <color key="titleColor" red="0.29071849579999998" green="0.40591660140000002" blue="0.68238180879999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="Zz3-Bm-swi" kind="show" id="NL9-g1-c9l"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.91381962439999997" green="0.54941323468048353" blue="0.35886865516930949" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -233,6 +236,36 @@
             </objects>
             <point key="canvasLocation" x="1307.2463768115942" y="886.60714285714278"/>
         </scene>
+        <!--Gameplay Collection View Controller-->
+        <scene sceneID="1ij-Ha-aPG">
+            <objects>
+                <collectionViewController id="Zz3-Bm-swi" customClass="GameplayCollectionViewController" customModule="SENIOR_PROJECT" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="3ec-Pt-axG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewLayout key="collectionViewLayout" id="W7s-Ph-d6b" customClass="CircleLayout" customModule="SENIOR_PROJECT" customModuleProvider="target"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="gameItemsID" id="mZh-yx-va2">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                                <color key="backgroundColor" red="1" green="0.96258362990000002" blue="0.53699977190000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Zz3-Bm-swi" id="pOV-OR-5hP"/>
+                            <outlet property="delegate" destination="Zz3-Bm-swi" id="3Eu-TR-MP2"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u3E-9Y-i4v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2215" y="889"/>
+        </scene>
         <!--Settings View Controller-->
         <scene sceneID="efb-4O-Obr">
             <objects>
@@ -242,14 +275,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlf-Mu-PdD">
-                                <rect key="frame" x="32" y="377" width="165.5" height="196"/>
+                                <rect key="frame" x="32" y="211" width="165.5" height="30"/>
                                 <color key="backgroundColor" red="0.016854130080000002" green="0.30177887219999999" blue="0.52728303109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yn-I1-V4R">
-                                <rect key="frame" x="216.5" y="598" width="165.5" height="196"/>
+                                <rect key="frame" x="216.5" y="266" width="165.5" height="30"/>
                                 <color key="backgroundColor" red="0.016854130080000002" green="0.30177887219999999" blue="0.52728303109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -257,19 +290,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWS-Ee-djY">
-                                <rect key="frame" x="32" y="598" width="165.5" height="196"/>
+                                <rect key="frame" x="32" y="266" width="165.5" height="30"/>
                                 <color key="backgroundColor" red="0.016854130080000002" green="0.30177887219999999" blue="0.52728303109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVE-Ln-mWI">
-                                <rect key="frame" x="216.5" y="377" width="165.5" height="196"/>
+                                <rect key="frame" x="216.5" y="211" width="165.5" height="30"/>
                                 <color key="backgroundColor" red="0.016854130080000002" green="0.30177887219999999" blue="0.52728303109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87Q-3d-EWN">
-                                <rect key="frame" x="32" y="156" width="350" height="196"/>
+                                <rect key="frame" x="32" y="156" width="350" height="30"/>
                                 <color key="backgroundColor" red="0.016854130080000002" green="0.30177887219999999" blue="0.52728303109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="bwu-xz-OYq"/>
