@@ -19,7 +19,7 @@ class RandomManager: NSObject {
         numOfChoice = 10
         numOfCorrect = 10
         correctPercentage = Double(numOfChoice/numOfCorrect)
-        createRandomObject()
+//        createRandomObject()
         
         print (listChoice)
     }

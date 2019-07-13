@@ -10,11 +10,29 @@ import UIKit
 
 private let reuseIdentifier = "gameItemsID"
 
-class GameplayCollectionViewController: UICollectionViewController {
 
+
+class GameplayCollectionViewController: UIViewController {
+    @IBOutlet weak var pauseButton: UIButton!
+    
+    @IBOutlet weak var alphaWidthConts: NSLayoutConstraint!
+    
+    
+    @IBOutlet weak var timeLabel: UILabel!
+    
+    
+    @IBOutlet weak var skipButton: UIButton!
+    
+    
+    @IBOutlet weak var hintButton: UIButton!
+    
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        alphaWidthConts.constant = 0
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -22,6 +40,16 @@ class GameplayCollectionViewController: UICollectionViewController {
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIView.animate(withDuration: 3.0, animations: {
+            self.alphaWidthConts.constant = self.view.bounds.width
+            self.view.layoutIfNeeded()
+        }) { (_) in
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 
     /*
@@ -34,61 +62,43 @@ class GameplayCollectionViewController: UICollectionViewController {
     }
     */
 
-    // MARK: UICollectionViewDataSource
+}
 
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+extension GameplayCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    // MARK: UICollectionViewDataSource
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
-
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 8
+        return 6
     }
-
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         
-    
+        
         // Configure the cell
-        cell.contentView.layer.cornerRadius = cell.contentView.bounds.height/2
-        let red = CGFloat(arc4random() % 256)/255.0
-        let green = CGFloat(arc4random() % 256)/255.0
-        let blue = CGFloat(arc4random() % 256)/255.0
-        cell.contentView.backgroundColor = UIColor.init(red: red, green: green, blue: blue, alpha: 1)
+        cell.contentView.layer.cornerRadius = 10//cell.contentView.bounds.height/2
+        cell.contentView.backgroundColor = UIColor.init(white: 1, alpha: 0.7)
+//        let red = CGFloat(arc4random() % 256)/255.0
+//        let green = CGFloat(arc4random() % 256)/255.0
+//        let blue = CGFloat(arc4random() % 256)/255.0
+//        cell.contentView.backgroundColor = UIColor.init(red: red, green: green, blue: blue, alpha: 1)
         return cell
     }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath)
     }
-    */
+}
 
+extension GameplayCollectionViewController: UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.size.width/3, height: collectionView.frame.size.width/3)
+    }
 }
