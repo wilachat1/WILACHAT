@@ -9,19 +9,22 @@
 import UIKit
 
 class RandomManager: NSObject {
-    let shared = RandomManager()
+    static let shared = RandomManager()
     var listChoice = [Bool]()
     var numOfCorrect: Int = 0
     var numOfChoice: Int = 0
-    var correctPercentage: Double = 0//0-100
     
     override init() {
-        numOfChoice = 10
-        numOfCorrect = 10
-        correctPercentage = Double(numOfChoice/numOfCorrect)
-//        createRandomObject()
-        
-        print (listChoice)
+        super.init()
+    
+    }
+    func random(numberOfChoice: Int, percentage: Int) -> [Bool]{
+        numOfChoice = numberOfChoice
+        numOfCorrect = Int(ceil(Double(numberOfChoice * percentage) / 100.0))
+        let correctPercentage = Double(numOfChoice/numOfCorrect)
+        let arr = createRandomObject(correctPercentage)
+        print("choice: \(numberOfChoice):: correct: \(numOfCorrect) :: percent: \(percentage)")
+        return arr
     }
     
     func randomFromPercent(percent: Double) -> Bool {
@@ -32,7 +35,8 @@ class RandomManager: NSObject {
         return arc4random() % modNumber == 0
     }
     
-    func createRandomObject(){
+    func createRandomObject(_ correctPercentage: Double) -> [Bool] {
+        listChoice = [Bool]()
         for _ in 0..<numOfChoice {
             listChoice.append(false)
         }
@@ -52,6 +56,7 @@ class RandomManager: NSObject {
                 index = 0
             }
         }
+        return listChoice
     }
 
 }
