@@ -41,7 +41,7 @@ class GameplayCollectionViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    var count:Double = 2
+    var count:Double = 1.5
     
     @objc func update() {
         count -= 0.1
@@ -54,7 +54,7 @@ class GameplayCollectionViewController: UIViewController {
         }
     }
     func countdownHandler() {
-        count = 2
+        count = 1.5
         timeLabel.text = "\(count)"
         countdown?.invalidate()
         countdown = nil
@@ -135,7 +135,7 @@ extension GameplayCollectionViewController: UICollectionViewDelegate, UICollecti
         cell.contentView.backgroundColor = UIColor.init(white: 1, alpha: 0.7)
 //        if numberOfChoice[indexPath.row] {
 //            cell.contentView.backgroundColor = UIColor.blue
-//        }
+//     }
 //        let red = CGFloat(arc4random() % 256)/255.0
 //        let green = CGFloat(arc4random() % 256)/255.0
 //        let blue = CGFloat(arc4random() % 256)/255.0
