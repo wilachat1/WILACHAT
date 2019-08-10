@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var firstStartButton: UIButton!
     
+    @IBOutlet weak var showHighScore: UILabel!
+   
     @IBOutlet weak var firstStartContainerButton: UIView!
     
     override func viewDidLoad() {
@@ -19,8 +22,23 @@ class ViewController: UIViewController {
        firstStartButton.layer.cornerRadius = 15
         
         firstStartContainerButton.layer.cornerRadius = 15
+   }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let realm = try! Realm()
+        let userScore = realm.objects(UserScore.self).sorted(byKeyPath: "score",ascending: false).first
+        showHighScore.text = "BEST:\(userScore?.score ?? 0)"
     }
-
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier  == "playgameSegue" {
+            if let vc = segue.destination as? GameplayCollectionViewController {
+                vc.userScore = UserScore()
+            }
+        }
+    }
     
 }
 

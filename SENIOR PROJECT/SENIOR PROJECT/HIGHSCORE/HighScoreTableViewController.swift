@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import FacebookCore
+import FBSDKCoreKit
+import FBSDKLoginKit
+import FacebookShare
 
 class Player {
     var name : String?
@@ -29,6 +33,18 @@ class HighScoreTableViewController: UITableViewController {
     var numberOfPlayer = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let fbRequestFriends: GraphRequest = GraphRequest(graphPath: "/{friend-list-id}", parameters: [AnyHashable : Any]() as! [String : Any])
+        
+        fbRequestFriends.start { (connection, result, error) in
+            if error == nil && result != nil {
+                print("Request Friends result : \(result!)")
+            } else {
+                print("Error \(error)")
+            }
+        }
+        
         setup()
         tableView.refreshControl = refresh
         refresh.addTarget(self, action: #selector(refreshDateData), for: .valueChanged)
@@ -115,7 +131,10 @@ class HighScoreTableViewController: UITableViewController {
         formatter.dateFormat = "HH:mm:ss dd/MM/yyyy"
         let result = formatter.string(from: date)
         cell.highScoreHeaderDate.text = result 
-        
+        let loginButton = FBLoginButton(frame: CGRect(x: 0, y: 0, width: 200, height: 44))
+        loginButton.permissions = ["user_friends"]
+        loginButton.delegate = self
+        cell.contentView.addSubview(loginButton)
         
         
         
@@ -144,4 +163,17 @@ extension Formatter {
         formatter.numberStyle = .decimal
         return formatter
     }()
+}
+
+extension HighScoreTableViewController: LoginButtonDelegate{
+    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+        //
+        print(result)
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
+        //
+    }
+    
+    
 }

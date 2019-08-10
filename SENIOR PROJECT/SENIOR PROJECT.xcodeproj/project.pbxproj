@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,6 +27,7 @@
 		F5EA9C3822D9A9A100E54A07 /* GameplayCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EA9C3722D9A9A100E54A07 /* GameplayCollectionViewController.swift */; };
 		F5EA9C3A22D9AB5E00E54A07 /* CircleLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EA9C3922D9AB5E00E54A07 /* CircleLayout.swift */; };
 		F5EA9C3C22D9B1E700E54A07 /* RandomManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EA9C3B22D9B1E700E54A07 /* RandomManager.swift */; };
+		F5F1CF0122FE95E60058CD70 /* UserScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1CF0022FE95E60058CD70 /* UserScore.swift */; };
 		FEBA9B4CA9B1BA328E2C17AC /* Pods_SENIOR_PROJECTUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B052AF542DF426C37A9A0C35 /* Pods_SENIOR_PROJECTUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		F5EA9C3722D9A9A100E54A07 /* GameplayCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayCollectionViewController.swift; sourceTree = "<group>"; };
 		F5EA9C3922D9AB5E00E54A07 /* CircleLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleLayout.swift; sourceTree = "<group>"; };
 		F5EA9C3B22D9B1E700E54A07 /* RandomManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomManager.swift; sourceTree = "<group>"; };
+		F5F1CF0022FE95E60058CD70 /* UserScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserScore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +123,6 @@
 				6248BFB969382BAD173CEC30 /* Pods-SENIOR PROJECTUITests.debug.xcconfig */,
 				60B8FF821211457B23DC6493 /* Pods-SENIOR PROJECTUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -148,6 +149,7 @@
 		F5713DA822BDCF2500068E36 = {
 			isa = PBXGroup;
 			children = (
+				F5F1CF0022FE95E60058CD70 /* UserScore.swift */,
 				F5713DB322BDCF2500068E36 /* SENIOR PROJECT */,
 				F5713DC822BDCF2700068E36 /* SENIOR PROJECTTests */,
 				F5713DD322BDCF2700068E36 /* SENIOR PROJECTUITests */,
@@ -429,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5132D4022D052010079136B /* HighScoreHeaderViewCell.swift in Sources */,
+				F5F1CF0122FE95E60058CD70 /* UserScore.swift in Sources */,
 				F51C093122EC20A7005BF599 /* ShowScoreViewController.swift in Sources */,
 				F5E53EB022C73F7600F4F8EC /* nature1Cell.swift in Sources */,
 				F5EA9C3822D9A9A100E54A07 /* GameplayCollectionViewController.swift in Sources */,

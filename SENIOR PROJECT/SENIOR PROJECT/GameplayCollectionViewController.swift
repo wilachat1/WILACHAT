@@ -26,6 +26,9 @@ class GameplayCollectionViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     
     @IBOutlet weak var questionNumberLabel: UILabel!
+    var questionNumber:Int = 1
+    var score:Int = 0
+    var userScore: UserScore?
     override func viewDidLoad() {
      
         super.viewDidLoad()
@@ -77,11 +80,11 @@ class GameplayCollectionViewController: UIViewController {
         questionNumberLabel.text = "\(questionNumber)"
     
     }
-    var questionNumber:Int = 1
-    var score:Int = 0
+
   
     func scoreCalculation() {
         score += questionNumber * numberOfChoice.count * 100
+        userScore?.score = score
         print(score)
     }
     
@@ -93,7 +96,15 @@ class GameplayCollectionViewController: UIViewController {
 //        }) { (_) in
 //      
 //        }
+  
+    
+    
+    
+    
     }
+    
+    
+    
 
     
     // MARK: - Navigation
@@ -104,7 +115,7 @@ class GameplayCollectionViewController: UIViewController {
         // Pass the selected object to the new view controller.
         if segue.identifier == "scoreIdentifier"{
             if let vc = segue.destination as? ShowScoreViewController{
-                vc.score = score
+                vc.score = userScore
             }
         }
     }
