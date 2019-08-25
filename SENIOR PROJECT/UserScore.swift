@@ -14,4 +14,6 @@ class UserScore:Object {
     @objc dynamic var level = 0
     @objc dynamic var score = 0
     @objc dynamic var playDate = Date()
+    @objc dynamic var skip = 0
+    @objc dynamic var hint = 0
 }

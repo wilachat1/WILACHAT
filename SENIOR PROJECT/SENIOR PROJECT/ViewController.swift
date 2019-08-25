@@ -17,6 +17,11 @@ class ViewController: UIViewController {
    
     @IBOutlet weak var firstStartContainerButton: UIView!
     
+    @IBOutlet weak var hintLabel:
+    UILabel!
+   
+    @IBOutlet weak var skipLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        firstStartButton.layer.cornerRadius = 15
@@ -29,13 +34,27 @@ class ViewController: UIViewController {
         let realm = try! Realm()
         let userScore = realm.objects(UserScore.self).sorted(byKeyPath: "score",ascending: false).first
         showHighScore.text = "BEST:\(userScore?.score ?? 0)"
+        hintLabel.text = UserDefaults.standard.value(forKey: "HINT_KEY") as? String ?? ""
+         skipLabel.text = UserDefaults.standard.value(forKey: "SKIP_KEY") as? String ?? ""
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier  == "playgameSegue" {
             if let vc = segue.destination as? GameplayCollectionViewController {
-                vc.userScore = UserScore()
+              let userScore = UserScore()
+                userScore.skip = 0
+                userScore.hint = 0
+                if let skip = UserDefaults.standard.value(forKey: "SKIP_KEY") as? String {
+                    let skipNumbeer = Int(skip) ?? 0
+                    userScore.skip = skipNumbeer >= 5 ? 5 : skipNumbeer
+                }
+                if let hint = UserDefaults.standard.value(forKey: "HINT_KEY") as? String {
+                    let hintNumbeer = Int(hint) ?? 0
+                    userScore.hint = hintNumbeer
+                }
+                vc.userScore = userScore
+                
             }
         }
     }

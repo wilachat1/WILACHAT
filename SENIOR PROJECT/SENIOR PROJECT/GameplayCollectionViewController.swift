@@ -58,11 +58,59 @@ class GameplayCollectionViewController: UIViewController {
     }
     func countdownHandler() {
         count = 1.5
-        timeLabel.text = "\(count)"
+       timeLabel.text = "\(count)"
         countdown?.invalidate()
         countdown = nil
         countdown = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+        
+   }
+    
+    @IBAction func hintHandler(_ sender: UIButton) {
+        guard userScore?.hint ?? 0 > 0 else {
+            return
+        }
+        userScore?.hint -= 1
+        if let hint = UserDefaults.standard.value(forKey: "HINT_KEY") as? String {
+            let newHint = "\((Int(hint) ?? 0) - 1)"
+            UserDefaults.standard.set(newHint, forKey: "HINT_KEY")
+            UserDefaults.standard.synchronize()
+            
+            }
+        
+      
+        let hintButtonTitle = "HINT(\(userScore?.hint ?? 0))"
+        hintButton.setTitle(hintButtonTitle, for: .normal)
+        countdown?.invalidate()
+        sender.isEnabled = false
+        hintDisplay()
     }
+    
+    func hintDisplay() {
+        var index = 0
+        while numberOfChoice[index]{
+            index += 1
+        }
+        if let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)){
+            cell.contentView.backgroundColor = .black
+        }
+    }
+    
+    @IBAction func skipHandler(_ sender: UIButton) {
+        guard userScore?.skip ?? 0 > 0 else {
+            return
+        }
+        userScore?.skip -= 1
+        if let skip = UserDefaults.standard.value(forKey: "SKIP_KEY") as? String {
+            let newSkip = "\((Int(skip) ?? 0) - 1)"
+            UserDefaults.standard.set(newSkip, forKey: "SKIP_KEY")
+            UserDefaults.standard.synchronize()
+           
+        }
+        scoreCalculation()
+        reloadGame()
+    }
+    
+    
     
     func prepareGamePlay(){
         let randomChoice = Int(arc4random() % 7 + 2)
@@ -78,7 +126,11 @@ class GameplayCollectionViewController: UIViewController {
         questionNumber += 1
         scoreLabel.text = "\(score)".addComma
         questionNumberLabel.text = "\(questionNumber)"
-    
+        let skipButtonTitle = "SKIP(\(userScore?.skip ?? 0))"
+        skipButton.setTitle(skipButtonTitle, for: .normal)
+        let hintButtonTitle = "HINT(\(userScore?.hint ?? 0))"
+        hintButton.setTitle(hintButtonTitle, for: .normal)
+        hintButton.isEnabled = true
     }
 
   
@@ -90,20 +142,16 @@ class GameplayCollectionViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        UIView.animate(withDuration: 3.0, animations: {
-//            self.alphaWidthConts.constant = self.view.bounds.width
-//            self.view.layoutIfNeeded()
-//        }) { (_) in
-//      
-//        }
-  
-    
-    
-    
     
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let skipButtonTitle = "SKIP(\(userScore?.skip ?? 0))"
+        skipButton.setTitle(skipButtonTitle, for: .normal)
+        let hintButtonTitle = "HINT(\(userScore?.hint ?? 0))"
+        hintButton.setTitle(hintButtonTitle, for: .normal)
+    }
     
 
     
@@ -160,7 +208,7 @@ extension GameplayCollectionViewController: UICollectionViewDelegate, UICollecti
             scoreCalculation()
             reloadGame()
         }else{
-            countdown?.invalidate()
+          countdown?.invalidate()
             countdown = nil
             performSegue(withIdentifier: "scoreIdentifier", sender: self)
         }

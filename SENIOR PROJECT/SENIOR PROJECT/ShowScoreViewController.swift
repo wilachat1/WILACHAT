@@ -43,7 +43,21 @@ class ShowScoreViewController: UIViewController {
         // Pass the selected object to the new view controller.
         if segue.identifier == "playAgainSegue" {
             if let vc = segue.destination as? GameplayCollectionViewController {
-                vc.userScore = UserScore()
+                let userScore = UserScore()
+                userScore.skip = 0
+                userScore.hint = 0
+                if let skip = UserDefaults.standard.value(forKey: "SKIP_KEY") as? String {
+                    let skipNumbeer = Int(skip) ?? 0
+                    userScore.skip = skipNumbeer >= 5 ? 5 : skipNumbeer
+                    
+                }
+              
+                if let hint = UserDefaults.standard.value(forKey: "HINT_KEY") as? String {
+                    let hintNumbeer = Int(hint) ?? 0
+                    userScore.hint = hintNumbeer
+                }
+                
+                vc.userScore = userScore
             }
         }
     }
