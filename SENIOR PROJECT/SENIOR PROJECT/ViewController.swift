@@ -13,9 +13,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var firstStartButton: UIButton!
     
-    @IBOutlet weak var showHighScore: UILabel!
+//    @IBOutlet weak var showHighScore: UILabel!
    
-    @IBOutlet weak var firstStartContainerButton: UIView!
+
     
     @IBOutlet weak var hintLabel:
     UILabel!
@@ -26,16 +26,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
        firstStartButton.layer.cornerRadius = 15
         
-        firstStartContainerButton.layer.cornerRadius = 15
+       
+        view.backgroundColor = UIColor(patternImage:UIImage(named: "bg") ?? UIImage())
+    
    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let realm = try! Realm()
         let userScore = realm.objects(UserScore.self).sorted(byKeyPath: "score",ascending: false).first
-        showHighScore.text = "BEST:\(userScore?.score ?? 0)"
-        hintLabel.text = UserDefaults.standard.value(forKey: "HINT_KEY") as? String ?? ""
-         skipLabel.text = UserDefaults.standard.value(forKey: "SKIP_KEY") as? String ?? ""
+//        showHighScore.text = "BEST:\(userScore?.score ?? 0)"
+        hintLabel.text = UserDefaults.standard.value(forKey: Constants.hintSaveKey) as? String ?? ""
+         skipLabel.text = UserDefaults.standard.value(forKey: Constants.skipSaveKey) as? String ?? ""
     }
     
     
@@ -45,11 +47,11 @@ class ViewController: UIViewController {
               let userScore = UserScore()
                 userScore.skip = 0
                 userScore.hint = 0
-                if let skip = UserDefaults.standard.value(forKey: "SKIP_KEY") as? String {
+                if let skip = UserDefaults.standard.value(forKey: Constants.skipSaveKey) as? String {
                     let skipNumbeer = Int(skip) ?? 0
                     userScore.skip = skipNumbeer >= 5 ? 5 : skipNumbeer
                 }
-                if let hint = UserDefaults.standard.value(forKey: "HINT_KEY") as? String {
+                if let hint = UserDefaults.standard.value(forKey: Constants.hintSaveKey) as? String {
                     let hintNumbeer = Int(hint) ?? 0
                     userScore.hint = hintNumbeer
                 }

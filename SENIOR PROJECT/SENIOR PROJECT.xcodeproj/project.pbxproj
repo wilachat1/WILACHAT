@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		43104D56CF1CEC5F8452EA05 /* Pods_SENIOR_PROJECT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB9C0885980E200BB9A3A30 /* Pods_SENIOR_PROJECT.framework */; };
 		790061C272472A82D344919A /* Pods_SENIOR_PROJECTTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C982B420A3524526D682969A /* Pods_SENIOR_PROJECTTests.framework */; };
+		F502808223235D9F0087BAA8 /* upheavtt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F502808123235D9F0087BAA8 /* upheavtt.ttf */; };
+		F502808323235D9F0087BAA8 /* upheavtt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F502808123235D9F0087BAA8 /* upheavtt.ttf */; };
+		F502808423235D9F0087BAA8 /* upheavtt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F502808123235D9F0087BAA8 /* upheavtt.ttf */; };
+		F502808623236B480087BAA8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F502808523236B480087BAA8 /* Constants.swift */; };
+		F502808723236B480087BAA8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F502808523236B480087BAA8 /* Constants.swift */; };
+		F502808823236B480087BAA8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F502808523236B480087BAA8 /* Constants.swift */; };
 		F5132D3E22D051730079136B /* HighScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5132D3D22D051730079136B /* HighScoreTableViewController.swift */; };
 		F5132D4022D052010079136B /* HighScoreHeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5132D3F22D052010079136B /* HighScoreHeaderViewCell.swift */; };
 		F5132D4222D0522D0079136B /* HighScoreNameViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5132D4122D0522D0079136B /* HighScoreNameViewCell.swift */; };
@@ -62,6 +68,8 @@
 		C982B420A3524526D682969A /* Pods_SENIOR_PROJECTTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SENIOR_PROJECTTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D37E81B47B0BBF3AC0E82FCE /* Pods-SENIOR PROJECTTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SENIOR PROJECTTests.release.xcconfig"; path = "Target Support Files/Pods-SENIOR PROJECTTests/Pods-SENIOR PROJECTTests.release.xcconfig"; sourceTree = "<group>"; };
 		DFB9C0885980E200BB9A3A30 /* Pods_SENIOR_PROJECT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SENIOR_PROJECT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F502808123235D9F0087BAA8 /* upheavtt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = upheavtt.ttf; sourceTree = "<group>"; };
+		F502808523236B480087BAA8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F5132D3D22D051730079136B /* HighScoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreTableViewController.swift; sourceTree = "<group>"; };
 		F5132D3F22D052010079136B /* HighScoreHeaderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreHeaderViewCell.swift; sourceTree = "<group>"; };
 		F5132D4122D0522D0079136B /* HighScoreNameViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreNameViewCell.swift; sourceTree = "<group>"; };
@@ -186,6 +194,7 @@
 				F51C093022EC20A7005BF599 /* ShowScoreViewController.swift */,
 				F5EA9C3B22D9B1E700E54A07 /* RandomManager.swift */,
 				F5EA9C3922D9AB5E00E54A07 /* CircleLayout.swift */,
+				F502808523236B480087BAA8 /* Constants.swift */,
 				F5E53EAF22C73F7600F4F8EC /* nature1Cell.swift */,
 				F5E53EAB22C7336600F4F8EC /* aboutUsTableViewController.swift */,
 				F5713DE222BDFB3B00068E36 /* SuccessViewController.swift */,
@@ -194,6 +203,7 @@
 				F5713DBD22BDCF2600068E36 /* LaunchScreen.storyboard */,
 				F5E53EA922C72B7D00F4F8EC /* SettingsViewController.swift */,
 				F59F038F23123B9E000DF1E5 /* 04B_30__.TTF */,
+				F502808123235D9F0087BAA8 /* upheavtt.ttf */,
 				F5132D4322D0524E0079136B /* HIGHSCORE */,
 			);
 			path = "SENIOR PROJECT";
@@ -326,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5713DBF22BDCF2600068E36 /* LaunchScreen.storyboard in Resources */,
+				F502808223235D9F0087BAA8 /* upheavtt.ttf in Resources */,
 				F5713DBC22BDCF2600068E36 /* Media.xcassets in Resources */,
 				F59F039023123B9E000DF1E5 /* 04B_30__.TTF in Resources */,
 				F5713DBA22BDCF2500068E36 /* Main.storyboard in Resources */,
@@ -337,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F59F039123123B9E000DF1E5 /* 04B_30__.TTF in Resources */,
+				F502808323235D9F0087BAA8 /* upheavtt.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F59F039223123B9E000DF1E5 /* 04B_30__.TTF in Resources */,
+				F502808423235D9F0087BAA8 /* upheavtt.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +461,7 @@
 				F5EA9C3822D9A9A100E54A07 /* GameplayCollectionViewController.swift in Sources */,
 				F5EA9C3A22D9AB5E00E54A07 /* CircleLayout.swift in Sources */,
 				F5713DB722BDCF2500068E36 /* ViewController.swift in Sources */,
+				F502808623236B480087BAA8 /* Constants.swift in Sources */,
 				F5713DE322BDFB3B00068E36 /* SuccessViewController.swift in Sources */,
 				F5EA9C3C22D9B1E700E54A07 /* RandomManager.swift in Sources */,
 				F5713DB522BDCF2500068E36 /* AppDelegate.swift in Sources */,
@@ -464,6 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5713DCA22BDCF2700068E36 /* SENIOR_PROJECTTests.swift in Sources */,
+				F502808723236B480087BAA8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +487,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5713DD522BDCF2700068E36 /* SENIOR_PROJECTUITests.swift in Sources */,
+				F502808823236B480087BAA8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

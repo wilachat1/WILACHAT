@@ -46,13 +46,13 @@ class ShowScoreViewController: UIViewController {
                 let userScore = UserScore()
                 userScore.skip = 0
                 userScore.hint = 0
-                if let skip = UserDefaults.standard.value(forKey: "SKIP_KEY") as? String {
+                if let skip = UserDefaults.standard.value(forKey: Constants.skipSaveKey) as? String {
                     let skipNumbeer = Int(skip) ?? 0
                     userScore.skip = skipNumbeer >= 5 ? 5 : skipNumbeer
                     
                 }
               
-                if let hint = UserDefaults.standard.value(forKey: "HINT_KEY") as? String {
+                if let hint = UserDefaults.standard.value(forKey: Constants.hintSaveKey) as? String {
                     let hintNumbeer = Int(hint) ?? 0
                     userScore.hint = hintNumbeer
                 }

@@ -22,7 +22,7 @@ class GameplayCollectionViewController: UIViewController {
     @IBOutlet weak var hintButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    @IBOutlet weak var timeLabel: UILabel!
+//@IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     
     @IBOutlet weak var questionNumberLabel: UILabel!
@@ -42,26 +42,31 @@ class GameplayCollectionViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
         
         // Do any additional setup after loading the view.
+        view.backgroundColor = UIColor(patternImage:UIImage(named: "bg") ?? UIImage())
     }
     
-    var count:Double = 1.5
+    var count:Double = Constants.countdownTimer
     
     @objc func update() {
-        count -= 0.1
+        count -= Constants.countdownFactor
         if(count > 0) {
-            timeLabel.text = String.init(format: "%.1f", count)
+//            timeLabel.text = String.init(format: "%.1f", count)
         }else{
             countdown?.invalidate()
             countdown = nil
             performSegue(withIdentifier: "scoreIdentifier", sender: self)
         }
+        if let layout = collectionView.collectionViewLayout as? CircleLayout {
+            layout.factor = layout.factor - 0.001333333333
+            layout.invalidateLayout()
+        }
     }
     func countdownHandler() {
-        count = 1.5
-       timeLabel.text = "\(count)"
+        count = Constants.countdownTimer
+//       timeLabel.text = "\(count)"
         countdown?.invalidate()
         countdown = nil
-        countdown = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+        countdown = Timer.scheduledTimer(timeInterval: Constants.countdownFactor, target: self, selector: #selector(update), userInfo: nil, repeats: true)
         
    }
     
@@ -70,9 +75,9 @@ class GameplayCollectionViewController: UIViewController {
             return
         }
         userScore?.hint -= 1
-        if let hint = UserDefaults.standard.value(forKey: "HINT_KEY") as? String {
+        if let hint = UserDefaults.standard.value(forKey: Constants.hintSaveKey) as? String {
             let newHint = "\((Int(hint) ?? 0) - 1)"
-            UserDefaults.standard.set(newHint, forKey: "HINT_KEY")
+            UserDefaults.standard.set(newHint, forKey: Constants.hintSaveKey)
             UserDefaults.standard.synchronize()
             
             }
@@ -100,9 +105,9 @@ class GameplayCollectionViewController: UIViewController {
             return
         }
         userScore?.skip -= 1
-        if let skip = UserDefaults.standard.value(forKey: "SKIP_KEY") as? String {
+        if let skip = UserDefaults.standard.value(forKey: Constants.skipSaveKey) as? String {
             let newSkip = "\((Int(skip) ?? 0) - 1)"
-            UserDefaults.standard.set(newSkip, forKey: "SKIP_KEY")
+            UserDefaults.standard.set(newSkip, forKey: Constants.skipSaveKey)
             UserDefaults.standard.synchronize()
            
         }
@@ -131,6 +136,10 @@ class GameplayCollectionViewController: UIViewController {
         let hintButtonTitle = "HINT(\(userScore?.hint ?? 0))"
         hintButton.setTitle(hintButtonTitle, for: .normal)
         hintButton.isEnabled = true
+        if let layout = collectionView.collectionViewLayout as? CircleLayout {
+            layout.factor = Constants.collectionFactor
+            layout.invalidateLayout()
+        }
     }
 
   

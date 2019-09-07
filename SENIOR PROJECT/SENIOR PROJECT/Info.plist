@@ -64,6 +64,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>04B_30__.TTF</string>
+		<string>upheavtt.ttf</string>
 	</array>
 </dict>
 </plist>

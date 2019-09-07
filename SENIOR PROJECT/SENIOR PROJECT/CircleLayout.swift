@@ -10,10 +10,11 @@ import UIKit
 
 class CircleLayout: UICollectionViewLayout {
     
-    private var center: CGPoint!
-    private var itemSize: CGSize!
-    private var radius: CGFloat!
-    private var numberOfItems: Int!
+     var center: CGPoint!
+     var itemSize: CGSize!
+     var radius: CGFloat!
+     var numberOfItems: Int!
+    var factor: CGFloat = Constants.collectionFactor
     
     override func prepare() {
         super.prepare()
@@ -22,8 +23,8 @@ class CircleLayout: UICollectionViewLayout {
         
         center = CGPoint(x: collectionView.bounds.midX, y: collectionView.bounds.midY)
         let shortestAxisLength = min(collectionView.bounds.width, collectionView.bounds.height)
-        itemSize = CGSize(width: shortestAxisLength * 0.15, height: shortestAxisLength * 0.15)
-        radius = shortestAxisLength * 0.26
+        itemSize = Constants.collectionItemSize
+        radius = shortestAxisLength * factor
         numberOfItems = collectionView.numberOfItems(inSection: 0)
     }
     
