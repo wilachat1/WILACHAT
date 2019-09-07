@@ -37,7 +37,7 @@ class GameplayCollectionViewController: UIViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         prepareGamePlay()
         navigationController?.isNavigationBarHidden = true
         
@@ -199,8 +199,8 @@ extension GameplayCollectionViewController: UICollectionViewDelegate, UICollecti
         
         
         // Configure the cell
-        cell.contentView.layer.cornerRadius = 10//cell.contentView.bounds.height/2
-        cell.contentView.backgroundColor = UIColor.init(white: 1, alpha: 0.7)
+//        cell.contentView.layer.cornerRadius = 10//cell.contentView.bounds.height/2
+//        cell.contentView.backgroundColor = UIColor.init(white: 1, alpha: 0.7)
 //        if numberOfChoice[indexPath.row] {
 //            cell.contentView.backgroundColor = UIColor.blue
 //     }
