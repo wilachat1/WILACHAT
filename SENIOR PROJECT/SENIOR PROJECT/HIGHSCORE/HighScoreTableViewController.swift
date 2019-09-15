@@ -56,6 +56,10 @@ class HighScoreTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = false
+    }
     func setup(){
         numberOfPlayer = Int(arc4random() % 16) + 5
         data = [Player]()

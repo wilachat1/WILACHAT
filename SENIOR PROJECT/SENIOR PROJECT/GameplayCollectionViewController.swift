@@ -7,13 +7,14 @@
 //
 
 import UIKit
-
+import AudioToolbox
 
 private let reuseIdentifier = "gameItemsID"
 
 
 
 class GameplayCollectionViewController: UIViewController {
+    @IBOutlet weak var backGroungImage: UIImageView!
     var numberOfChoice:[Bool] = [Bool]()
     var countdown: Timer?
     @IBOutlet weak var pauseButton: UIButton!
@@ -70,6 +71,19 @@ class GameplayCollectionViewController: UIViewController {
         
    }
     
+    private func rotateChoice(){
+//        collectionView.layer.removeAllAnimations()
+//        UIView.animate(withDuration: 5, delay: 0, options: .allowUserInteraction, animations: {
+//            self.collectionView.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+//        }) { (finish) in
+        
+//        }
+        
+        
+        
+    }
+    
+    
     @IBAction func hintHandler(_ sender: UIButton) {
         guard userScore?.hint ?? 0 > 0 else {
             return
@@ -96,7 +110,7 @@ class GameplayCollectionViewController: UIViewController {
             index += 1
         }
         if let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)){
-            cell.contentView.backgroundColor = .black
+            cell.contentView.alpha = 0.5
         }
     }
     
@@ -124,28 +138,50 @@ class GameplayCollectionViewController: UIViewController {
             randomChoice, percentage: correctPercentage)
         collectionView.reloadData()
         countdownHandler()
+    
+        self.collectionView.transform = .identity
+        rotateChoice()
     }
     
     func reloadGame() {
-        prepareGamePlay()
-        questionNumber += 1
-        scoreLabel.text = "\(score)".addComma
-        questionNumberLabel.text = "\(questionNumber)"
-        let skipButtonTitle = "SKIP(\(userScore?.skip ?? 0))"
-        skipButton.setTitle(skipButtonTitle, for: .normal)
-        let hintButtonTitle = "HINT(\(userScore?.hint ?? 0))"
-        hintButton.setTitle(hintButtonTitle, for: .normal)
-        hintButton.isEnabled = true
-        if let layout = collectionView.collectionViewLayout as? CircleLayout {
-            layout.factor = Constants.collectionFactor
-            layout.invalidateLayout()
+        UIView.animate(withDuration: 0.26, delay: 0, options: [], animations: {
+            self.backGroungImage.transform = CGAffineTransform.init(scaleX: 2.5, y: 2.5)
+            self.collectionView.transform = CGAffineTransform.init(scaleX: 0.1, y: 0.1)
+        }) { (finished) in
+            self.backGroungImage.transform = .identity
+            self.collectionView.transform = .identity
+            self.prepareGamePlay()
+           self.questionNumber += 1
+            self.scoreLabel.text = "\(self.score)".addComma
+            self.questionNumberLabel.text = "\(self.userScore?.level ?? 1)"
+            let skipButtonTitle = "SKIP(\(self.userScore?.skip ?? 0))"
+            self.skipButton.setTitle(skipButtonTitle, for: .normal)
+            let hintButtonTitle = "HINT(\(self.userScore?.hint ?? 0))"
+            self.hintButton.setTitle(hintButtonTitle, for: .normal)
+            self.hintButton.isEnabled = true
+            if let layout = self.collectionView.collectionViewLayout as? CircleLayout {
+                layout.factor = Constants.collectionFactor
+                layout.invalidateLayout()
+            }
         }
+        
+
     }
 
   
     func scoreCalculation() {
-        score += questionNumber * numberOfChoice.count * 100
+        var level = 0
+        for step in Constants.levelStep {
+            if score < step {
+                break
+            }
+            level += 1
+        }
+        score += level * Constants.scoreMultiplier
+        
+        
         userScore?.score = score
+        userScore?.level = level
         print(score)
     }
     
@@ -171,6 +207,7 @@ class GameplayCollectionViewController: UIViewController {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
         if segue.identifier == "scoreIdentifier"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             if let vc = segue.destination as? ShowScoreViewController{
                 vc.score = userScore
             }
@@ -197,17 +234,9 @@ extension GameplayCollectionViewController: UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         
+        cell.contentView.alpha = 1
         
-        // Configure the cell
-//        cell.contentView.layer.cornerRadius = 10//cell.contentView.bounds.height/2
-//        cell.contentView.backgroundColor = UIColor.init(white: 1, alpha: 0.7)
-//        if numberOfChoice[indexPath.row] {
-//            cell.contentView.backgroundColor = UIColor.blue
-//     }
-//        let red = CGFloat(arc4random() % 256)/255.0
-//        let green = CGFloat(arc4random() % 256)/255.0
-//        let blue = CGFloat(arc4random() % 256)/255.0
-//        cell.contentView.backgroundColor = UIColor.init(red: red, green: green, blue: blue, alpha: 1)
+
         return cell
     }
     

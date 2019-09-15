@@ -38,6 +38,7 @@ class ViewController: UIViewController {
 //        showHighScore.text = "BEST:\(userScore?.score ?? 0)"
         hintLabel.text = UserDefaults.standard.value(forKey: Constants.hintSaveKey) as? String ?? ""
          skipLabel.text = UserDefaults.standard.value(forKey: Constants.skipSaveKey) as? String ?? ""
+        navigationController?.navigationBar.isHidden = true 
     }
     
     

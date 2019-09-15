@@ -41,7 +41,7 @@ moreHintMoreSkipButton.layer.cornerRadius = 15
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        navigationController?.navigationBar.isHidden = false 
     }
     
     override func viewDidAppear(_ animated: Bool) {

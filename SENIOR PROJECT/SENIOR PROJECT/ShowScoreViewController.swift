@@ -10,6 +10,11 @@ import UIKit
 import RealmSwift
 
 class ShowScoreViewController: UIViewController {
+  
+    @IBOutlet weak var
+    levelLabel:
+    UILabel!
+  
     @IBOutlet weak var yourScoreIs: UILabel!
     
     @IBOutlet weak var scoreLabel: UILabel!
@@ -31,6 +36,7 @@ class ShowScoreViewController: UIViewController {
         }
         // Do any additional setup after loading the view.
         scoreLabel.text = "\(score?.score ?? 0)".addComma
+        levelLabel.text = "\(score?.level ?? 1)"
     }
     
 

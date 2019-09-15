@@ -11,7 +11,7 @@ import RealmSwift
 
 class UserScore:Object {
     @objc dynamic var fbid = ""
-    @objc dynamic var level = 0
+    @objc dynamic var level = 1
     @objc dynamic var score = 0
     @objc dynamic var playDate = Date()
     @objc dynamic var skip = 0

@@ -11,11 +11,12 @@ import UIKit
 class Constants: NSObject {
     
     static let collectionFactor: CGFloat = 0.4
-    static let collectionItemSize: CGSize = CGSize(width: 88, height: 88)
+    static let collectionItemSize: CGSize = CGSize(width: 100, height: 100)
     static let countdownTimer: Double = 3.0
     static let countdownFactor: Double = 0.01
     static let skipSaveKey: String = "SKIP_KEY"
     static let hintSaveKey: String = "HINT_KEY"
-    
+    static let scoreMultiplier: Int = 100
+    static let levelStep: Array = [0,1000,2000,3000,4000,5000,6000,7000,8000,9000,10000]
 
 }

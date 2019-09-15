@@ -48,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if UserDefaults.standard.value(forKey: Constants.skipSaveKey) != nil {
  return true
         }
-        UserDefaults.standard.set("40", forKey: Constants.skipSaveKey)
+   UserDefaults.standard.set("40", forKey: Constants.skipSaveKey)
         UserDefaults.standard.set("40", forKey: Constants.hintSaveKey)
         UserDefaults.standard.synchronize()
         return true
