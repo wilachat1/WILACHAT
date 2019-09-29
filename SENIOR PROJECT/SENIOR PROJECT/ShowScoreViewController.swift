@@ -34,6 +34,9 @@ class ShowScoreViewController: UIViewController {
         try! realm.write {
             realm.add(score!)
         }
+             view.backgroundColor = UIColor(patternImage:UIImage(named: "bg") ?? UIImage())
+         
+        
         // Do any additional setup after loading the view.
         scoreLabel.text = "\(score?.score ?? 0)".addComma
         levelLabel.text = "\(score?.level ?? 1)"

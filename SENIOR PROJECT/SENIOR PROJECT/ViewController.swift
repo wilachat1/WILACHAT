@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var firstStartButton: UIButton!
     
-//    @IBOutlet weak var showHighScore: UILabel!
+  @IBOutlet weak var showHighScore: UILabel!
    
 
     
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         let realm = try! Realm()
         let userScore = realm.objects(UserScore.self).sorted(byKeyPath: "score",ascending: false).first
-//        showHighScore.text = "BEST:\(userScore?.score ?? 0)"
+    showHighScore.text =  "BEST:\(userScore?.score ?? 0)"
         hintLabel.text = UserDefaults.standard.value(forKey: Constants.hintSaveKey) as? String ?? ""
          skipLabel.text = UserDefaults.standard.value(forKey: Constants.skipSaveKey) as? String ?? ""
         navigationController?.navigationBar.isHidden = true 

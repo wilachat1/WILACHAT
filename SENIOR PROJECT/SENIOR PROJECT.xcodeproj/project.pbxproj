@@ -19,6 +19,7 @@
 		F5132D4022D052010079136B /* HighScoreHeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5132D3F22D052010079136B /* HighScoreHeaderViewCell.swift */; };
 		F5132D4222D0522D0079136B /* HighScoreNameViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5132D4122D0522D0079136B /* HighScoreNameViewCell.swift */; };
 		F51C093122EC20A7005BF599 /* ShowScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51C093022EC20A7005BF599 /* ShowScoreViewController.swift */; };
+		F51FCC3623406D2100F1C30A /* AnimateBackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51FCC3523406D2100F1C30A /* AnimateBackgroundViewController.swift */; };
 		F56F16F123123E74007C3BC5 /* FBAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56F16F023123E74007C3BC5 /* FBAccount.swift */; };
 		F5713DB522BDCF2500068E36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5713DB422BDCF2500068E36 /* AppDelegate.swift */; };
 		F5713DB722BDCF2500068E36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5713DB622BDCF2500068E36 /* ViewController.swift */; };
@@ -74,6 +75,7 @@
 		F5132D3F22D052010079136B /* HighScoreHeaderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreHeaderViewCell.swift; sourceTree = "<group>"; };
 		F5132D4122D0522D0079136B /* HighScoreNameViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreNameViewCell.swift; sourceTree = "<group>"; };
 		F51C093022EC20A7005BF599 /* ShowScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowScoreViewController.swift; sourceTree = "<group>"; };
+		F51FCC3523406D2100F1C30A /* AnimateBackgroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateBackgroundViewController.swift; sourceTree = "<group>"; };
 		F56F16F023123E74007C3BC5 /* FBAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBAccount.swift; sourceTree = "<group>"; };
 		F5713DB122BDCF2500068E36 /* SENIOR PROJECT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SENIOR PROJECT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5713DB422BDCF2500068E36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				F5713DB422BDCF2500068E36 /* AppDelegate.swift */,
 				F5713DB622BDCF2500068E36 /* ViewController.swift */,
 				F5713DB822BDCF2500068E36 /* Main.storyboard */,
+				F51FCC3523406D2100F1C30A /* AnimateBackgroundViewController.swift */,
 				F56F16F023123E74007C3BC5 /* FBAccount.swift */,
 				F5EA9C3722D9A9A100E54A07 /* GameplayCollectionViewController.swift */,
 				F51C093022EC20A7005BF599 /* ShowScoreViewController.swift */,
@@ -454,6 +457,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F51FCC3623406D2100F1C30A /* AnimateBackgroundViewController.swift in Sources */,
 				F5132D4022D052010079136B /* HighScoreHeaderViewCell.swift in Sources */,
 				F5F1CF0122FE95E60058CD70 /* UserScore.swift in Sources */,
 				F51C093122EC20A7005BF599 /* ShowScoreViewController.swift in Sources */,

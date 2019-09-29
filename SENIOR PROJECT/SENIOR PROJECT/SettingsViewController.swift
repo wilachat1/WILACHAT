@@ -9,51 +9,36 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-    @IBOutlet weak var moreHintMoreSkipButton: UIButton!
-    
-    @IBOutlet weak var leaderboardButton: UIButton!
+
+  
     
     
     @IBOutlet weak var justForFunButton: UIButton!
     
     
+    @IBOutlet weak var getMoreHintButton: UIButton!
     
-    @IBOutlet weak var musicButton: UIButton!
+    @IBAction func backHandler(_ sender: Any) { navigationController?.popViewController(animated: true)
+        
+    }
+    @IBOutlet weak var getMoreSkipButton: UIButton!
+    @IBOutlet weak var musicOnButton: UIButton!
     
     
     @IBOutlet weak var aboutUsButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-moreHintMoreSkipButton.layer.cornerRadius = 15
-        
-        leaderboardButton.layer.cornerRadius = 15
-        
-        justForFunButton.layer.cornerRadius = 15
-        musicButton.layer.cornerRadius = 15
-        aboutUsButton.layer.cornerRadius = 15
+             view.backgroundColor = UIColor(patternImage:UIImage(named: "bg") ?? UIImage())
+         
+        }
 
         
         
         
         
         // Do any additional setup after loading the view.
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.navigationBar.isHidden = false 
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        moreHintMoreSkipButton.dropShadow()
-        
-    aboutUsButton.dropShadow()
-        leaderboardButton.dropShadow()
-       musicButton.dropShadow()
-     justForFunButton.dropShadow()
-    }
-    
+
 
     /*
     // MARK: - Navigation

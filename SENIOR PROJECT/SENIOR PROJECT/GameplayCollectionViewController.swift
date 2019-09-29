@@ -35,10 +35,10 @@ class GameplayCollectionViewController: UIViewController {
         super.viewDidLoad()
       
         // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+ 
 
         // Register cell classes
-//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+//       self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         prepareGamePlay()
         navigationController?.isNavigationBarHidden = true
         
@@ -106,6 +106,11 @@ class GameplayCollectionViewController: UIViewController {
     
     func hintDisplay() {
         var index = 0
+        guard !numberOfChoice.allSatisfy({ $0 == true}) else {
+            hintButton.isEnabled = false
+            return
+            
+        }
         while numberOfChoice[index]{
             index += 1
         }
@@ -146,14 +151,14 @@ class GameplayCollectionViewController: UIViewController {
     func reloadGame() {
         UIView.animate(withDuration: 0.26, delay: 0, options: [], animations: {
             self.backGroungImage.transform = CGAffineTransform.init(scaleX: 2.5, y: 2.5)
-            self.collectionView.transform = CGAffineTransform.init(scaleX: 0.1, y: 0.1)
+            self.collectionView.transform = CGAffineTransform.init(scaleX: 0.01, y: 0.01)
         }) { (finished) in
             self.backGroungImage.transform = .identity
             self.collectionView.transform = .identity
             self.prepareGamePlay()
            self.questionNumber += 1
             self.scoreLabel.text = "\(self.score)".addComma
-            self.questionNumberLabel.text = "\(self.userScore?.level ?? 1)"
+            self.questionNumberLabel.text = "LEVEL \(self.userScore?.level ?? 1)"
             let skipButtonTitle = "SKIP(\(self.userScore?.skip ?? 0))"
             self.skipButton.setTitle(skipButtonTitle, for: .normal)
             let hintButtonTitle = "HINT(\(self.userScore?.hint ?? 0))"
@@ -235,6 +240,11 @@ extension GameplayCollectionViewController: UICollectionViewDelegate, UICollecti
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         
         cell.contentView.alpha = 1
+        if numberOfChoice[indexPath.row] {
+            cell.contentView.layer.borderColor = UIColor.white.cgColor
+        }else{
+            cell.contentView.layer.borderColor = UIColor.red.cgColor
+        }
         
 
         return cell
