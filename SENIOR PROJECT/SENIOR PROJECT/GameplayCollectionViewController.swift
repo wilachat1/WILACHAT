@@ -18,7 +18,8 @@ class GameplayCollectionViewController: UIViewController {
     var numberOfChoice:[Bool] = [Bool]()
     var countdown: Timer?
     @IBOutlet weak var pauseButton: UIButton!
-   
+    @IBOutlet weak var stateLabel: UILabel!
+    
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var hintButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -146,6 +147,7 @@ class GameplayCollectionViewController: UIViewController {
     
         self.collectionView.transform = .identity
         rotateChoice()
+        stateLabel.text = "LUCKY: \(RandomManager.shared.numOfCorrect) LOSE: \(numberOfChoice.count - RandomManager.shared.numOfCorrect)"
     }
     
     func reloadGame() {

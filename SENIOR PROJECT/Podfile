@@ -10,6 +10,9 @@ pod 'FacebookCore'
 pod 'FacebookLogin'
 pod 'FacebookShare'
 pod 'RealmSwift'
+pod 'Firebase/Analytics'
+pod 'Firebase/AdMob'
+pod 'MBProgressHUD', '~> 1.1.0'
 
   target 'SENIOR PROJECTTests' do
     inherit! :search_paths

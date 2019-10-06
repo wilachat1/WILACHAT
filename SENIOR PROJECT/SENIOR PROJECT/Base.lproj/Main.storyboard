@@ -347,6 +347,14 @@
                                 <color key="shadowColor" white="0.0" alpha="0.40464469178082191" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="2" height="2"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LUCKY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5Y-K8-qg7">
+                                <rect key="frame" x="179.5" y="104.5" width="55" height="17.5"/>
+                                <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="0.40464469180000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.16078431372549018" green="0.15686274509803921" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -356,11 +364,13 @@
                             <constraint firstItem="Ham-kg-6fq" firstAttribute="trailing" secondItem="FSz-dx-U0K" secondAttribute="trailing" constant="20" id="80u-jn-pQN"/>
                             <constraint firstItem="hib-RW-wpp" firstAttribute="centerY" secondItem="Ham-kg-6fq" secondAttribute="centerY" constant="-15" id="Anf-Np-qra"/>
                             <constraint firstItem="UTI-sj-SlZ" firstAttribute="bottom" secondItem="lga-5v-7XT" secondAttribute="bottom" id="H9S-lz-nF2"/>
+                            <constraint firstItem="y5Y-K8-qg7" firstAttribute="centerX" secondItem="enN-LM-5gx" secondAttribute="centerX" id="HRU-98-jyh"/>
                             <constraint firstItem="FSz-dx-U0K" firstAttribute="top" secondItem="Ham-kg-6fq" secondAttribute="top" constant="15" id="Hqp-Gs-TSG"/>
                             <constraint firstItem="Ham-kg-6fq" firstAttribute="trailing" secondItem="xdW-kq-HPx" secondAttribute="trailing" id="L4r-Mn-MKv"/>
                             <constraint firstItem="enN-LM-5gx" firstAttribute="centerX" secondItem="FSz-dx-U0K" secondAttribute="centerX" id="Q8G-pg-NR4"/>
                             <constraint firstItem="hib-RW-wpp" firstAttribute="leading" secondItem="Ham-kg-6fq" secondAttribute="leading" id="T8s-Oc-Rw3"/>
                             <constraint firstItem="enN-LM-5gx" firstAttribute="top" secondItem="FSz-dx-U0K" secondAttribute="bottom" id="Van-L4-W0U"/>
+                            <constraint firstItem="y5Y-K8-qg7" firstAttribute="top" secondItem="enN-LM-5gx" secondAttribute="bottom" id="Y2R-22-cnK"/>
                             <constraint firstItem="UTI-sj-SlZ" firstAttribute="leading" secondItem="xdW-kq-HPx" secondAttribute="leading" id="eJZ-0f-ydz"/>
                             <constraint firstItem="Ham-kg-6fq" firstAttribute="trailing" secondItem="hib-RW-wpp" secondAttribute="trailing" id="fF7-8h-XZZ"/>
                             <constraint firstItem="hib-RW-wpp" firstAttribute="centerX" secondItem="Ham-kg-6fq" secondAttribute="centerX" id="hlb-eb-dKp"/>
@@ -377,6 +387,7 @@
                         <outlet property="questionNumberLabel" destination="enN-LM-5gx" id="xKz-Mm-xMp"/>
                         <outlet property="scoreLabel" destination="FSz-dx-U0K" id="o6a-t3-gx0"/>
                         <outlet property="skipButton" destination="u30-Fb-ddU" id="QHQ-e5-26u"/>
+                        <outlet property="stateLabel" destination="y5Y-K8-qg7" id="pLL-a3-ypr"/>
                         <segue destination="Km5-Td-lIQ" kind="show" identifier="scoreIdentifier" id="Oya-GA-CEo"/>
                     </connections>
                 </viewController>
@@ -519,6 +530,9 @@
                                 <state key="normal" title="HINT" image="buy_skip_button">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buyHintHandler:" destination="9eS-qU-QOM" eventType="touchUpInside" id="Drn-qC-6WT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mev-Dt-7fW">
                                 <rect key="frame" x="49.5" y="344" width="315" height="95"/>
@@ -529,9 +543,12 @@
                                 <state key="normal" title="SKIP" image="buy_hint_button">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buySkipHandler:" destination="9eS-qU-QOM" eventType="touchUpInside" id="8PP-ph-GGv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yxu-Rh-1J2">
-                                <rect key="frame" x="20" y="58" width="49" height="68"/>
+                                <rect key="frame" x="20" y="58" width="49" height="67.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="49" id="54b-Ga-iDM"/>
                                 </constraints>
@@ -749,7 +766,7 @@
         <image name="sound_on_button" width="149.5" height="160"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="861-5e-DFA"/>
+        <segue reference="Nbd-X8-aAX"/>
         <segue reference="Y0E-Cj-57H"/>
     </inferredMetricsTieBreakers>
 </document>

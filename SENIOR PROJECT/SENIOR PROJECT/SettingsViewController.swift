@@ -7,6 +7,13 @@
 //
 
 import UIKit
+import Firebase
+import MBProgressHUD
+
+enum BuyingType: String {
+    case hint = "HINT_KEY"
+    case skip = "SKIP_KEY"
+}
 
 class SettingsViewController: UIViewController {
 
@@ -27,14 +34,48 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var aboutUsButton: UIButton!
     
+    var currentBuyingType: BuyingType = .hint
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
              view.backgroundColor = UIColor(patternImage:UIImage(named: "bg") ?? UIImage())
          
         }
-
+    func loadAds(){ MBProgressHUD.showAdded(to:view, animated: true)
+               GADRewardBasedVideoAd.sharedInstance().delegate = self
+               #if DEBUG
+           GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),
+               withAdUnitID: "ca-app-pub-3940256099942544/1712485313")
+               #endif
+             
         
+    }
         
+    
+    
+    @IBAction func buyHintHandler(_ sender: Any) { loadAds()
+        currentBuyingType = .hint
+    }
+    
+    @IBAction func buySkipHandler(_ sender: UIButton) {
+    loadAds()
+        currentBuyingType = .skip
+    }
+    
+  
+    func updateSaveValue(type: BuyingType) {
+        let amountLeft = UserDefaults.standard.value(forKey: type.rawValue) as! String
+        var totalAmount = Int(amountLeft) ?? 0
+        totalAmount += Constants.plusAmount
+        UserDefaults.standard.setValue("\(totalAmount)", forKey: type.rawValue)
+        UserDefaults.standard.synchronize()
+    }
+    
+    
+    
+    
+    
         
         
         // Do any additional setup after loading the view.
@@ -66,3 +107,43 @@ extension UIView {
     }
 }
 
+extension SettingsViewController: GADRewardBasedVideoAdDelegate {
+    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd,
+        didRewardUserWith reward: GADAdReward) {
+      print("Reward received with currency: \(reward.type), amount \(reward.amount).")
+        updateSaveValue(type: currentBuyingType)
+    }
+
+    func rewardBasedVideoAdDidReceive(_ rewardBasedVideoAd:GADRewardBasedVideoAd) {
+      print("Reward based video ad is received.")
+        MBProgressHUD.hide(for: view, animated: true)
+        if GADRewardBasedVideoAd.sharedInstance().isReady == true {
+                GADRewardBasedVideoAd.sharedInstance().present(fromRootViewController: self)
+              }
+    }
+
+    func rewardBasedVideoAdDidOpen(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+      print("Opened reward based video ad.")
+    }
+
+    func rewardBasedVideoAdDidStartPlaying(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+      print("Reward based video ad started playing.")
+    }
+
+    func rewardBasedVideoAdDidCompletePlaying(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+      print("Reward based video ad has completed.")
+    }
+
+    func rewardBasedVideoAdDidClose(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+      print("Reward based video ad is closed.")
+    }
+
+    func rewardBasedVideoAdWillLeaveApplication(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+      print("Reward based video ad will leave application.")
+    }
+
+    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd,
+        didFailToLoadWithError error: Error) {
+      print("Reward based video ad failed to load.")
+    }
+}

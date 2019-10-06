@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>161665839766-jj2pi4s2eai46v4h68epvmut13q089mu.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.161665839766-jj2pi4s2eai46v4h68epvmut13q089mu</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD8PgNIvbfBegwB6E5CLJ0naAvxyZAo9jE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>161665839766</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.wilachat.SENIOR-PROJECT</string>
+	<key>PROJECT_ID</key>
+	<string>lucky-or-lose</string>
+	<key>STORAGE_BUCKET</key>
+	<string>lucky-or-lose.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:161665839766:ios:0e99c15b9b220b8ebcc8b7</string>
+	<key>DATABASE_URL</key>
+	<string>https://lucky-or-lose.firebaseio.com</string>
+</dict>
+</plist>

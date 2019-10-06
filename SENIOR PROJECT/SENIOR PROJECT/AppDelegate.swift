@@ -9,6 +9,7 @@
 import UIKit
 import FBSDKCoreKit
 import RealmSwift
+import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -18,6 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        // Use Firebase library to configure APIs.
+        FirebaseApp.configure()
+
+        // Initialize the Google Mobile Ads SDK.
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),
+        withAdUnitID: "ca-app-pub-3940256099942544/1712485313")
      
         // Inside your application(application:didFinishLaunchingWithOptions:)
         

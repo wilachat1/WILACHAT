@@ -18,5 +18,6 @@ class Constants: NSObject {
     static let hintSaveKey: String = "HINT_KEY"
     static let scoreMultiplier: Int = 100
     static let levelStep: Array = [0,1000,2000,3000,4000,5000,6000,7000,8000,9000,10000]
+    static let plusAmount: Int = 5
 
 }
