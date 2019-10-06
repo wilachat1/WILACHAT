@@ -34,7 +34,7 @@ class HighScoreTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+         view.backgroundColor = UIColor(patternImage:UIImage(named: "bg") ?? UIImage())
         let fbRequestFriends: GraphRequest = GraphRequest(graphPath: "/{friend-list-id}", parameters: [AnyHashable : Any]() as! [String : Any])
         
         fbRequestFriends.start { (connection, result, error) in
@@ -104,20 +104,7 @@ class HighScoreTableViewController: UITableViewController {
         cell.highScoreScoreLabel.text = p.score?.formattedWithSeparator
         cell.highScoreRanking.text = "\(indexPath.row + 1)"
         
-        cell.contentView.backgroundColor = UIColor.lightGray
-       
-        if indexPath.row == 0 {
-            cell.contentView.backgroundColor = UIColor.red
-            
-        }
-        
-        if indexPath.row == 1 {
-            cell.contentView.backgroundColor = UIColor.orange
-        }
-        if indexPath.row == 2 {
-            cell.contentView.backgroundColor = UIColor.yellow
-        }
-        
+    
         
         
         // Configure the cell...

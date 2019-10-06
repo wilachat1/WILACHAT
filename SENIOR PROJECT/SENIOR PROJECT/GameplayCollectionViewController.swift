@@ -161,11 +161,8 @@ class GameplayCollectionViewController: UIViewController {
            self.questionNumber += 1
             self.scoreLabel.text = "\(self.score)".addComma
             self.questionNumberLabel.text = "LEVEL \(self.userScore?.level ?? 1)"
-            let skipButtonTitle = "SKIP(\(self.userScore?.skip ?? 0))"
-            self.skipButton.setTitle(skipButtonTitle, for: .normal)
-            let hintButtonTitle = "HINT(\(self.userScore?.hint ?? 0))"
-            self.hintButton.setTitle(hintButtonTitle, for: .normal)
-            self.hintButton.isEnabled = true
+            self.skipButton.isEnabled = (self.userScore?.skip ?? 0) > 0
+            self.hintButton.isEnabled = (self.userScore?.hint ?? 0) > 0
             if let layout = self.collectionView.collectionViewLayout as? CircleLayout {
                 layout.factor = Constants.collectionFactor
                 layout.invalidateLayout()
@@ -185,6 +182,7 @@ class GameplayCollectionViewController: UIViewController {
             level += 1
         }
         score += level * Constants.scoreMultiplier
+        score += Constants.scoreMultiplier
         
         
         userScore?.score = score
