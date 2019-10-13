@@ -13,6 +13,10 @@ pod 'RealmSwift'
 pod 'Firebase/Analytics'
 pod 'Firebase/AdMob'
 pod 'MBProgressHUD', '~> 1.1.0'
+pod 'Firebase/Core'
+pod 'Firebase/Firestore'
+
+
 
   target 'SENIOR PROJECTTests' do
     inherit! :search_paths

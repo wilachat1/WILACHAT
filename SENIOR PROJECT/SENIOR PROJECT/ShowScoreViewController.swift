@@ -8,6 +8,8 @@
 
 import UIKit
 import RealmSwift
+import Firebase
+import FBSDKCoreKit
 
 class ShowScoreViewController: UIViewController {
   
@@ -40,6 +42,7 @@ class ShowScoreViewController: UIViewController {
         // Do any additional setup after loading the view.
         scoreLabel.text = "\(score?.score ?? 0)".addComma
         levelLabel.text = "\(score?.level ?? 1)"
+        updateUserScore()
     }
     
 
@@ -70,6 +73,28 @@ class ShowScoreViewController: UIViewController {
             }
         }
     }
+    func updateUserScore() {
+        Profile.loadCurrentProfile { [weak self](profile, error) in
+            let db = Firestore.firestore()
+                 
+                  var ref: DocumentReference? = nil
+                  ref = db.collection(Constants.Keys.userScore).addDocument(data: [
+                      Constants.Keys.fbid: profile?.userID ?? "-",
+                      Constants.Keys.level: self?.score?.level ?? 0,
+                     Constants.Keys.playDate: Date(),
+                     Constants.Keys.score: self?.score?.score ?? 0
+                  ]) { err in
+                      if let err = err {
+                          print("Error adding document: \(err)")
+                      } else {
+                          print("Document added with ID: \(ref!.documentID)")
+                      }
+                  }
+
+              }
+              
+        }
+
     
 
 }

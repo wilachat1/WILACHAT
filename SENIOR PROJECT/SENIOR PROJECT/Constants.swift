@@ -19,5 +19,15 @@ class Constants: NSObject {
     static let scoreMultiplier: Int = 50
     static let levelStep: Array = [0,1000,2000,3000,4000,5000,6000,7000,8000,9000,10000]
     static let plusAmount: Int = 5
+    
+    struct Keys {
+        static let fbid: String = "fbid"
+        static let level: String = "level"
+        static let playDate: String = "playDate"
+        static let score: String = "score"
+        static let userScore: String = "userScore"
+        
+
+    }
 
 }

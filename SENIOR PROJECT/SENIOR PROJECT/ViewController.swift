@@ -8,6 +8,12 @@
 
 import UIKit
 import RealmSwift
+import FacebookCore
+import FBSDKCoreKit
+import FBSDKLoginKit
+import FacebookShare
+
+
 
 class ViewController: UIViewController {
     
@@ -22,6 +28,8 @@ class ViewController: UIViewController {
    
     @IBOutlet weak var skipLabel: UILabel!
     
+    @IBOutlet weak var facebookButton: UIView!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
        firstStartButton.layer.cornerRadius = 15
@@ -38,7 +46,19 @@ class ViewController: UIViewController {
     showHighScore.text =  "BEST:\(userScore?.score ?? 0)"
         hintLabel.text = UserDefaults.standard.value(forKey: Constants.hintSaveKey) as? String ?? ""
          skipLabel.text = UserDefaults.standard.value(forKey: Constants.skipSaveKey) as? String ?? ""
-        navigationController?.navigationBar.isHidden = true 
+        navigationController?.navigationBar.isHidden = true
+        
+        Profile.loadCurrentProfile {[weak self](profile, error) in
+            if (error != nil) {
+                
+            let loginButton = FBLoginButton(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
+                loginButton.permissions = ["user_friends"]
+                loginButton.delegate = self
+                self?.facebookButton.addSubview(loginButton)
+            }
+        }
+        
+        
     }
     
     
@@ -64,3 +84,15 @@ class ViewController: UIViewController {
     
 }
 
+extension ViewController: LoginButtonDelegate{
+    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+        //
+        print(result)
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
+        //
+    }
+    
+    
+}
