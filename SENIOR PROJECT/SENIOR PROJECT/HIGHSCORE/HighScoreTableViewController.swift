@@ -7,18 +7,34 @@
 //
 
 import UIKit
-class Player {
+import Firebase
+import MBProgressHUD
+
+struct Player {
     var name : String?
-    var icon : String?
+    var imageURL : String?
     var score : Int?
-    var color : UIColor?
+    var level : Int?
+    
+
+    init(dict:[String:Any]) {
+        let name = dict[Constants.Keys.fbName]
+        let score = dict[Constants.Keys.score]
+        let level = dict[Constants.Keys.level]
+        self.name = name as! String
+        self.score = score as! Int
+        self.level = level as! Int
+    
+        
+    }
 }
 
 class HighScoreTableViewController: UITableViewController {
-    let name = ["Waan","Earth","Mike","Tan","May"]
+    let name = ["Waan","Earth","Mike","Tan","Peem"]
     
     internal let refresh = UIRefreshControl()
     
+    @IBOutlet weak var backButton: UIButton!
     
     
     
@@ -40,7 +56,7 @@ class HighScoreTableViewController: UITableViewController {
 //            }
 //        }
         
-        setup()
+//        setup()
         tableView.refreshControl = refresh
         refresh.addTarget(self, action: #selector(refreshDateData), for: .valueChanged)
 
@@ -53,27 +69,54 @@ class HighScoreTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.isHidden = false
-    }
-    func setup(){
-        numberOfPlayer = Int(arc4random() % 16) + 5
-        data = [Player]()
+        navigationController?.navigationBar.isHidden = true
+        MBProgressHUD.showAdded(to: view, animated: true)
         
-        for _ in 0..<numberOfPlayer {
-            let p = Player()
-            let randomNameIndex = Int(arc4random() % 5)
-            p.name = name[randomNameIndex]
-            p.score = Int(arc4random() % 9901) + 100
-            data.append(p)
-            
+        let db = Firestore.firestore()
+        db.collection(Constants.Keys.userScore).getDocuments() { (querySnapshot, err) in
+            MBProgressHUD.hide(for: self.view, animated: true)
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                self.data = [Player]()
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                    let player = Player(dict: document.data())
+                    self.data.append(player)
+             
+            }
+              self.data = self.data.sorted(by: { $0.score ?? 0 > $1.score ?? 0 })
+                self.tableView.reloadData()
+            }
         }
-        data = data.sorted(by: { $0.score ?? 0 > $1.score ?? 0 })
-        refresh.endRefreshing()
-        tableView.reloadData()
+
+    }
+//    func setup(input:[Any]){
+//        numberOfPlayer = input.count
+//        data = [Player]()
+//
+//        for index in 0..<numberOfPlayer {
+//            let p = Player()
+//            p.name = input[index][Constants.Keys.fbName]
+//            p.score = Int(arc4random() % 9901) + 100
+//            data.append(p)
+//
+//        }
+//        refresh.endRefreshing()
+//        tableView.reloadData()
+//    }
+    
+    @IBAction func backHandler(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+        
+    
     }
     
+    
+    
+    
     @objc func refreshDateData(){
-        setup()
+//        setup()
         
     }
 
@@ -99,6 +142,7 @@ class HighScoreTableViewController: UITableViewController {
         cell.highScoreScoreLabel.text = p.score?.formattedWithSeparator
         cell.highScoreRanking.text = "\(indexPath.row + 1)"
         
+        cell.levelLabel.text = "LEVEL: \(p.level ?? 1)"
     
         
         
@@ -107,29 +151,6 @@ class HighScoreTableViewController: UITableViewController {
         return cell
     }
 
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "HighScoreHeaderViewCell") as? HighScoreHeaderViewCell else {
-            return UITableViewCell().contentView
-            }
-        
-        let date = Date()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HH:mm:ss dd/MM/yyyy"
-        let result = formatter.string(from: date)
-        cell.highScoreHeaderDate.text = result 
-       
-        
-        
-        
-        return cell.contentView
-        
-        
-        
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 120
-    }
 
 }
 

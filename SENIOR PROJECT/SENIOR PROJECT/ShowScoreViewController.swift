@@ -82,7 +82,9 @@ class ShowScoreViewController: UIViewController {
                       Constants.Keys.fbid: profile?.userID ?? "-",
                       Constants.Keys.level: self?.score?.level ?? 0,
                      Constants.Keys.playDate: Date(),
-                     Constants.Keys.score: self?.score?.score ?? 0
+                     Constants.Keys.score: self?.score?.score ?? 0,
+                     Constants.Keys.fbName: profile?.name ?? ""
+                    
                   ]) { err in
                       if let err = err {
                           print("Error adding document: \(err)")

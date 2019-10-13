@@ -77,10 +77,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="game_logo" translatesAutoresizingMaskIntoConstraints="NO" id="7DN-VR-x2V">
-                                <rect key="frame" x="30" y="-182.5" width="354" height="843"/>
+                                <rect key="frame" x="30" y="-181.5" width="354" height="841"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BEST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvo-WO-7q6">
-                                <rect key="frame" x="174.5" y="639.5" width="65" height="31.5"/>
+                                <rect key="frame" x="174.5" y="638.5" width="65" height="31.5"/>
                                 <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="0.4510916095890411" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -158,57 +158,40 @@
         <scene sceneID="P8s-8e-DaT">
             <objects>
                 <tableViewController id="bxk-BT-Qrq" customClass="HighScoreTableViewController" customModule="SENIOR_PROJECT" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kW0-TG-ASJ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="kW0-TG-ASJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HighScoreHeaderViewCell" rowHeight="104" id="sr5-yM-4pX" customClass="HighScoreHeaderViewCell" customModule="SENIOR_PROJECT" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="104"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sr5-yM-4pX" id="ziM-3Z-R68">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="104"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drb-75-sCq">
-                                            <rect key="frame" x="207" y="52" width="0.0" height="0.0"/>
-                                            <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="38"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AlI-HT-UfH">
-                                            <rect key="frame" x="93" y="82" width="227" height="17.5"/>
-                                            <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="15"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hi_score" translatesAutoresizingMaskIntoConstraints="NO" id="drb-F9-nKT">
-                                            <rect key="frame" x="106" y="-12" width="240" height="128"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuT-Ph-15g">
-                                            <rect key="frame" x="36" y="18" width="49" height="68"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="back_buton"/>
-                                        </button>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="RhT-BR-dbQ">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="148"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuT-Ph-15g">
+                                    <rect key="frame" x="24" y="9" width="49" height="68"/>
+                                    <state key="normal" image="back_buton"/>
+                                    <connections>
+                                        <action selector="backHandler:" destination="bxk-BT-Qrq" eventType="touchUpInside" id="ZCH-Iv-bgt"/>
+                                    </connections>
+                                </button>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hi_score" translatesAutoresizingMaskIntoConstraints="NO" id="drb-F9-nKT">
+                                    <rect key="frame" x="87" y="15" width="240" height="128"/>
                                     <constraints>
-                                        <constraint firstItem="drb-75-sCq" firstAttribute="centerX" secondItem="ziM-3Z-R68" secondAttribute="centerX" id="CdR-R3-Eya"/>
-                                        <constraint firstItem="drb-75-sCq" firstAttribute="centerY" secondItem="ziM-3Z-R68" secondAttribute="centerY" id="Gyx-Qw-iTe"/>
-                                        <constraint firstItem="AlI-HT-UfH" firstAttribute="trailing" secondItem="drb-75-sCq" secondAttribute="trailing" id="KW8-7S-bFZ"/>
-                                        <constraint firstItem="AlI-HT-UfH" firstAttribute="top" secondItem="drb-75-sCq" secondAttribute="bottom" constant="5" id="aLk-rI-aaO"/>
-                                        <constraint firstItem="AlI-HT-UfH" firstAttribute="leading" secondItem="drb-75-sCq" secondAttribute="leading" id="inb-z4-c1n"/>
+                                        <constraint firstAttribute="height" constant="128" id="0nV-VR-hxq"/>
+                                        <constraint firstAttribute="width" constant="240" id="9qr-4O-ynJ"/>
                                     </constraints>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <outlet property="highScoreHeaderDate" destination="AlI-HT-UfH" id="S72-n3-O1j"/>
-                                    <outlet property="highScoreTitleLabel" destination="drb-75-sCq" id="mWA-5E-MuL"/>
-                                </connections>
-                            </tableViewCell>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="xuT-Ph-15g" firstAttribute="centerY" secondItem="drb-F9-nKT" secondAttribute="centerY" id="2FU-G9-UKv"/>
+                                <constraint firstItem="drb-F9-nKT" firstAttribute="centerX" secondItem="RhT-BR-dbQ" secondAttribute="centerX" id="4ZB-j3-r80"/>
+                                <constraint firstItem="drb-F9-nKT" firstAttribute="top" secondItem="RhT-BR-dbQ" secondAttribute="top" constant="15" id="Ag4-yD-BHb"/>
+                                <constraint firstItem="drb-F9-nKT" firstAttribute="leading" secondItem="xuT-Ph-15g" secondAttribute="trailing" constant="14" id="NJi-eu-FeK"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HighScoreNameViewCell2" rowHeight="168" id="ybg-WR-ZX1" customClass="HighScoreNameViewCell" customModule="SENIOR_PROJECT" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="132" width="414" height="168"/>
+                                <rect key="frame" x="0.0" y="203.5" width="414" height="168"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ybg-WR-ZX1" id="1E6-JK-ko1">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="168"/>
@@ -257,7 +240,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HighScoreNameViewCell" rowHeight="168" id="tY0-mz-0wB" customClass="HighScoreNameViewCell" customModule="SENIOR_PROJECT" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="300" width="414" height="168"/>
+                                <rect key="frame" x="0.0" y="371.5" width="414" height="168"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tY0-mz-0wB" id="xim-AK-4dy">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="168"/>
@@ -348,10 +331,11 @@
                                     <outlet property="highScoreName" destination="wrY-nO-N5n" id="cBZ-aq-ZYg"/>
                                     <outlet property="highScoreRanking" destination="mea-p7-4DS" id="u6f-yn-Dbi"/>
                                     <outlet property="highScoreScoreLabel" destination="KhZ-QI-04s" id="LC4-ss-Pzo"/>
+                                    <outlet property="levelLabel" destination="MUj-rW-7tx" id="JbX-xR-rYt"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HighScoreNameViewCellMe" rowHeight="168" id="9vO-kn-jRm" customClass="HighScoreNameViewCell" customModule="SENIOR_PROJECT" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="468" width="414" height="168"/>
+                                <rect key="frame" x="0.0" y="539.5" width="414" height="168"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9vO-kn-jRm" id="ar4-YB-3OM">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="168"/>
@@ -450,6 +434,9 @@
                             <outlet property="delegate" destination="bxk-BT-Qrq" id="Glt-Px-xe7"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="backButton" destination="xuT-Ph-15g" id="pPv-zb-R3c"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rnu-aq-gz5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -952,13 +939,13 @@
         <image name="buy_skip_button" width="450" height="117.5"/>
         <image name="game_bg" width="562.5" height="1218"/>
         <image name="game_btn" width="211.5" height="226"/>
-        <image name="game_logo" width="479" height="421.5"/>
+        <image name="game_logo" width="483" height="420.5"/>
         <image name="game_over" width="450" height="117.5"/>
         <image name="hi_score" width="392.5" height="131.5"/>
         <image name="hint_button" width="172.5" height="71.5"/>
         <image name="hiscore_btn" width="119" height="127"/>
         <image name="home_button" width="149.5" height="160"/>
-        <image name="option" width="393" height="132"/>
+        <image name="option" width="392.5" height="131.5"/>
         <image name="option_btn" width="119" height="127"/>
         <image name="play_btn" width="211.5" height="226"/>
         <image name="re-play_button" width="149.5" height="160"/>

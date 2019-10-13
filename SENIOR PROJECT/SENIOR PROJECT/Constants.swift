@@ -26,7 +26,7 @@ class Constants: NSObject {
         static let playDate: String = "playDate"
         static let score: String = "score"
         static let userScore: String = "userScore"
-        
+        static let fbName: String = "fbName"
 
     }
 

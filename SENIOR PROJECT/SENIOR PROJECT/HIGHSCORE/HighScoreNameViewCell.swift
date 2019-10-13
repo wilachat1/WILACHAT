@@ -10,14 +10,16 @@ import UIKit
 
 class HighScoreNameViewCell: UITableViewCell {
 
+    
+    
     @IBOutlet weak var highScoreScoreLabel: UILabel!
   
-    
-    
     @IBOutlet weak var highScoreName: UILabel!
     
     @IBOutlet weak var highScoreRanking: UILabel!
     
+    @IBOutlet weak var levelLabel: UILabel!
+  
     @IBOutlet weak var highScoreIconImage: UIImageView!
     
     
