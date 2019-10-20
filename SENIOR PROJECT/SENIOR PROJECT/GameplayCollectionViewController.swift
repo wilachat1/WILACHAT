@@ -24,7 +24,12 @@ class GameplayCollectionViewController: UIViewController {
     @IBOutlet weak var hintButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
-//@IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var levelupLabel: UILabel!
+    
+    
+    
+    //@IBOutlet weak var timeLabel: UILabel!
+   
     @IBOutlet weak var scoreLabel: UILabel!
     
     @IBOutlet weak var questionNumberLabel: UILabel!
@@ -98,25 +103,26 @@ class GameplayCollectionViewController: UIViewController {
             }
         
       
-        let hintButtonTitle = "HINT(\(userScore?.hint ?? 0))"
-        hintButton.setTitle(hintButtonTitle, for: .normal)
+       updateHintSkipButton()
         countdown?.invalidate()
         sender.isEnabled = false
-        hintDisplay()
+     
+            hintDisplay()
+        
     }
     
     func hintDisplay() {
-        var index = 0
-        guard !numberOfChoice.allSatisfy({ $0 == true}) else {
-            hintButton.isEnabled = false
-            return
-            
-        }
-        while numberOfChoice[index]{
-            index += 1
-        }
-        if let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)){
-            cell.contentView.alpha = 0.5
+        let index = (userScore?.level ?? 1) - 1
+        let hintNumber = Constants.hintstep[index]
+        let result = numberOfChoice.enumerated().filter({ !$0.element}).map({$0.offset})
+        let loopHint = hintNumber >= numberOfChoice.count ? numberOfChoice.count - 1 : hintNumber
+        for (i,foundIndex) in result.enumerated(){
+            if i >= loopHint {
+                break
+            }
+            if let cell = collectionView.cellForItem(at: IndexPath(item:foundIndex, section: 0)) {
+                cell.contentView.alpha = 0.5
+            }
         }
     }
     
@@ -131,6 +137,7 @@ class GameplayCollectionViewController: UIViewController {
             UserDefaults.standard.synchronize()
            
         }
+        updateHintSkipButton()
         scoreCalculation()
         reloadGame()
     }
@@ -174,13 +181,8 @@ class GameplayCollectionViewController: UIViewController {
 
   
     func scoreCalculation() {
-        var level = 0
-        for step in Constants.levelStep {
-            if score < step {
-                break
-            }
-            level += 1
-        }
+        let level = getCurrentLevel()
+
         score += level * Constants.scoreMultiplier
         score += Constants.scoreMultiplier
         
@@ -190,6 +192,22 @@ class GameplayCollectionViewController: UIViewController {
         print(score)
     }
     
+    func getCurrentLevel () -> Int {
+        var level = 0
+          for step in Constants.levelStep {
+              if score < step {
+                  break
+              }
+              level += 1
+          }
+        if level > 1 && level != userScore?.level {
+            NotificationCenter.default.post(name: Constants.levelUpNotification, object: nil)
+        }
+        return level
+    }
+    
+    
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     
@@ -197,14 +215,43 @@ class GameplayCollectionViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let skipButtonTitle = "SKIP(\(userScore?.skip ?? 0))"
-        skipButton.setTitle(skipButtonTitle, for: .normal)
-        let hintButtonTitle = "HINT(\(userScore?.hint ?? 0))"
-        hintButton.setTitle(hintButtonTitle, for: .normal)
+        NotificationCenter.default.addObserver(self, selector: #selector(levelup(notification:)), name: Constants.levelUpNotification, object: nil)
+        levelupLabel.alpha = 0
+    updateHintSkipButton()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self, name: Constants.levelUpNotification, object: nil)
     }
     
+    @objc func levelup(notification: Notification){
+        levelupLabel.transform = .identity
+        levelupLabel.alpha = 1
+    
+        UIView.animate(withDuration: 0.3, animations: {
+                        self.levelupLabel.transform = CGAffineTransform.init(scaleX: 2, y: 2)
+        
+        }) { (finish) in
+            self.levelupLabel.alpha = 0
+        }
+        plusSkipPoint()
+        updateHintSkipButton()
+    }
 
     
+    func plusSkipPoint() {
+        let index = (userScore?.level ?? 1) - 1
+        let skipPoint = Constants.skipstep[index]
+        userScore?.skip += skipPoint
+    }
+    
+    func updateHintSkipButton() {
+    let skipButtonTitle = "SKIP(\(userScore?.skip ?? 0))"
+    skipButton.setTitle(skipButtonTitle, for: .normal)
+    let hintButtonTitle = "HINT(\(userScore?.hint ?? 0))"
+    hintButton.setTitle(hintButtonTitle, for: .normal)
+  
+    }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
