@@ -36,6 +36,13 @@ class GameplayCollectionViewController: UIViewController {
     var questionNumber:Int = 1
     var score:Int = 0
     var userScore: UserScore?
+    var bgController = AnimateBackgroundViewController()
+    
+    
+    @IBOutlet weak var HintCountLabel: UILabel!
+    @IBOutlet weak var SkipCountLabel: UILabel!
+   
+    
     override func viewDidLoad() {
      
         super.viewDidLoad()
@@ -49,7 +56,20 @@ class GameplayCollectionViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
         
         // Do any additional setup after loading the view.
+        
         view.backgroundColor = UIColor(patternImage:UIImage(named: "bg") ?? UIImage())
+   createBackground()
+    }
+    
+    
+    func createBackground() {
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AnimateBackgroundViewController") as? AnimateBackgroundViewController else{
+            return
+        }
+        bgController = vc
+        addChild(bgController)
+        view.insertSubview(bgController.view, at: 0)
+        
     }
     
     var count:Double = Constants.countdownTimer
@@ -146,7 +166,7 @@ class GameplayCollectionViewController: UIViewController {
     
     func prepareGamePlay(){
         let randomChoice = Int(arc4random() % 7 + 2)
-        let correctPercentage = Int(arc4random() % 60 + 10)
+        let correctPercentage = 100 //Int(arc4random() % 60 + 10)
         numberOfChoice = RandomManager.shared.random(numberOfChoice:
             randomChoice, percentage: correctPercentage)
         collectionView.reloadData()
@@ -159,10 +179,10 @@ class GameplayCollectionViewController: UIViewController {
     
     func reloadGame() {
         UIView.animate(withDuration: 0.26, delay: 0, options: [], animations: {
-            self.backGroungImage.transform = CGAffineTransform.init(scaleX: 2.5, y: 2.5)
+//            self.backGroungImage.transform = CGAffineTransform.init(scaleX: 2.5, y: 2.5)
             self.collectionView.transform = CGAffineTransform.init(scaleX: 0.01, y: 0.01)
         }) { (finished) in
-            self.backGroungImage.transform = .identity
+           
             self.collectionView.transform = .identity
             self.prepareGamePlay()
            self.questionNumber += 1
@@ -201,7 +221,7 @@ class GameplayCollectionViewController: UIViewController {
               level += 1
           }
         if level > 1 && level != userScore?.level {
-            NotificationCenter.default.post(name: Constants.levelUpNotification, object: nil)
+            NotificationCenter.default.post(name: Constants.levelUpNotification, object: nil, userInfo: ["level":level])
         }
         return level
     }
@@ -247,9 +267,9 @@ class GameplayCollectionViewController: UIViewController {
     
     func updateHintSkipButton() {
     let skipButtonTitle = "SKIP(\(userScore?.skip ?? 0))"
-    skipButton.setTitle(skipButtonTitle, for: .normal)
+        SkipCountLabel.text = skipButtonTitle
     let hintButtonTitle = "HINT(\(userScore?.hint ?? 0))"
-    hintButton.setTitle(hintButtonTitle, for: .normal)
+    HintCountLabel.text = hintButtonTitle 
   
     }
     // MARK: - Navigation
