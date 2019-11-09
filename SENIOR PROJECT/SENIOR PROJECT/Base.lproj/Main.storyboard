@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z3i-CV-Qtj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z3i-CV-Qtj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -771,6 +771,12 @@
                                     <action selector="backHandler:" destination="9eS-qU-QOM" eventType="touchUpInside" id="4zZ-Bj-UxN"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WILACHAT VER 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0j-0e-WMA">
+                                <rect key="frame" x="262" y="795" width="129" height="16"/>
+                                <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.83921568627450982" blue="0.38431372549019605" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -778,6 +784,7 @@
                             <constraint firstItem="bhp-O1-ipA" firstAttribute="top" secondItem="41J-rW-30a" secondAttribute="top" constant="15" id="0YD-Hp-4np"/>
                             <constraint firstItem="bhp-O1-ipA" firstAttribute="leading" secondItem="Yxu-Rh-1J2" secondAttribute="trailing" constant="13" id="2VH-3a-3n9"/>
                             <constraint firstItem="Yxu-Rh-1J2" firstAttribute="leading" secondItem="41J-rW-30a" secondAttribute="leading" constant="15" id="EyG-PI-JCH"/>
+                            <constraint firstItem="g0j-0e-WMA" firstAttribute="bottom" secondItem="41J-rW-30a" secondAttribute="bottom" constant="3" id="Ira-wS-18a"/>
                             <constraint firstItem="XM6-Zj-aj4" firstAttribute="centerX" secondItem="Mev-Dt-7fW" secondAttribute="centerX" id="RtP-y1-wks"/>
                             <constraint firstItem="YWS-Ee-djY" firstAttribute="centerX" secondItem="41J-rW-30a" secondAttribute="centerX" id="XTB-yi-BKf"/>
                             <constraint firstItem="Mev-Dt-7fW" firstAttribute="centerX" secondItem="YWS-Ee-djY" secondAttribute="centerX" id="XgQ-FI-7ps"/>
@@ -786,6 +793,7 @@
                             <constraint firstItem="YWS-Ee-djY" firstAttribute="top" secondItem="bhp-O1-ipA" secondAttribute="bottom" constant="35" id="eDW-Sf-2v4"/>
                             <constraint firstItem="XM6-Zj-aj4" firstAttribute="top" secondItem="Mev-Dt-7fW" secondAttribute="bottom" constant="18" id="msf-Yl-Gfh"/>
                             <constraint firstItem="Yxu-Rh-1J2" firstAttribute="top" secondItem="41J-rW-30a" secondAttribute="top" constant="37" id="sH4-Tw-ALC"/>
+                            <constraint firstItem="41J-rW-30a" firstAttribute="trailing" secondItem="g0j-0e-WMA" secondAttribute="trailing" constant="23" id="yQj-px-BoK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="41J-rW-30a"/>
                     </view>

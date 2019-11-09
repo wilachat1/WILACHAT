@@ -166,7 +166,7 @@ class GameplayCollectionViewController: UIViewController {
     
     func prepareGamePlay(){
         let randomChoice = Int(arc4random() % 7 + 2)
-        let correctPercentage = 100 //Int(arc4random() % 60 + 10)
+        let correctPercentage = Int(arc4random() % 60 + 10)
         numberOfChoice = RandomManager.shared.random(numberOfChoice:
             randomChoice, percentage: correctPercentage)
         collectionView.reloadData()
