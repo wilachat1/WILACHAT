@@ -140,10 +140,12 @@ extension SettingsViewController: GADRewardBasedVideoAdDelegate {
 
     func rewardBasedVideoAdWillLeaveApplication(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
       print("Reward based video ad will leave application.")
+        MBProgressHUD.hide(for: view, animated: true)
     }
 
     func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd,
         didFailToLoadWithError error: Error) {
+        MBProgressHUD.hide(for: view, animated: true)
       print("Reward based video ad failed to load.")
     }
 }

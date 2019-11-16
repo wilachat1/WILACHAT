@@ -10,12 +10,13 @@ import UIKit
 import Firebase
 import MBProgressHUD
 
-struct Player {
+struct Player: Hashable {
     var name : String?
     var imageURL : String?
     var score : Int?
     var level : Int?
     
+    var hashValue: Int { return name.hashValue }
 
     init(dict:[String:Any]) {
         let name = dict[Constants.Keys.fbName]
@@ -26,6 +27,10 @@ struct Player {
         self.level = level as! Int
     
         
+    }
+    
+    static func ==(lhs: Player, rhs: Player) -> Bool {
+        return lhs.name == rhs.name
     }
 }
 
@@ -86,25 +91,13 @@ class HighScoreTableViewController: UITableViewController {
              
             }
               self.data = self.data.sorted(by: { $0.score ?? 0 > $1.score ?? 0 })
+                let dataSet = Set(self.data)
+                self.data = Array(dataSet)
                 self.tableView.reloadData()
             }
         }
 
     }
-//    func setup(input:[Any]){
-//        numberOfPlayer = input.count
-//        data = [Player]()
-//
-//        for index in 0..<numberOfPlayer {
-//            let p = Player()
-//            p.name = input[index][Constants.Keys.fbName]
-//            p.score = Int(arc4random() % 9901) + 100
-//            data.append(p)
-//
-//        }
-//        refresh.endRefreshing()
-//        tableView.reloadData()
-//    }
     
     @IBAction func backHandler(_ sender: Any) {
         navigationController?.popViewController(animated: true)

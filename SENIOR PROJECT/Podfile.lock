@@ -150,7 +150,7 @@ DEPENDENCIES:
   - RealmSwift
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - BoringSSL-GRPC
     - FacebookCore
     - FacebookLogin
@@ -212,4 +212,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 9a1ee989d245a299b606a3814e00b5380078b667
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.4
