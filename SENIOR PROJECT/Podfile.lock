@@ -137,6 +137,9 @@ PODS:
   - Realm/Headers (3.17.3)
   - RealmSwift (3.17.3):
     - Realm (= 3.17.3)
+  - SDWebImage (5.2.2):
+    - SDWebImage/Core (= 5.2.2)
+  - SDWebImage/Core (5.2.2)
 
 DEPENDENCIES:
   - FacebookCore
@@ -148,9 +151,10 @@ DEPENDENCIES:
   - Firebase/Firestore
   - MBProgressHUD (~> 1.1.0)
   - RealmSwift
+  - SDWebImage (~> 5.0)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - BoringSSL-GRPC
     - FacebookCore
     - FacebookLogin
@@ -179,6 +183,7 @@ SPEC REPOS:
     - Protobuf
     - Realm
     - RealmSwift
+    - SDWebImage
 
 SPEC CHECKSUMS:
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
@@ -209,7 +214,8 @@ SPEC CHECKSUMS:
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
   Realm: 5a1d9d47bfc101dd597668b1a8af4288a2557f6d
   RealmSwift: b7fdc2d18616621c31df5c7a398a45a2163f8eb0
+  SDWebImage: 5fcdb02cc35e05fc35791ec514b191d27189f872
 
-PODFILE CHECKSUM: 9a1ee989d245a299b606a3814e00b5380078b667
+PODFILE CHECKSUM: 7dc6a262b36a195714e2f772b8bdaa6f77b46d53
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.7.5

@@ -52,7 +52,7 @@ class ViewController: UIViewController {
             if (profile == nil) {
                 self?.facebookButton.isHidden = false
                 let loginButton = FBLoginButton(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
-                loginButton.permissions = ["user_friends"]
+//                loginButton.permissions = ["user_friends"]
                 loginButton.delegate = self
                 self?.facebookButton.addSubview(loginButton)
             }else{
