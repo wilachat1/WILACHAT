@@ -54,9 +54,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let realm = try! Realm()
         
         
-        if UserDefaults.standard.value(forKey: Constants.skipSaveKey) != nil {
- return true
-        }
+//        if UserDefaults.standard.value(forKey: Constants.skipSaveKey) != nil {
+// return true
+//        }
    UserDefaults.standard.set("40", forKey: Constants.skipSaveKey)
         UserDefaults.standard.set("40", forKey: Constants.hintSaveKey)
         UserDefaults.standard.synchronize()
