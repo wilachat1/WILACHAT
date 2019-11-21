@@ -49,17 +49,17 @@ class ViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
         
         Profile.loadCurrentProfile {[weak self](profile, error) in
-            if (error != nil) {
-                
-            let loginButton = FBLoginButton(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
-                loginButton.permissions = ["user_friends"]
+            if (profile == nil) {
+                self?.facebookButton.isHidden = false
+                let loginButton = FBLoginButton(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
+//                loginButton.permissions = ["user_friends"]
                 loginButton.delegate = self
                 self?.facebookButton.addSubview(loginButton)
+            }else{
+                self?.facebookButton.isHidden = true
             }
         }
-        
-        
-    }
+}
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

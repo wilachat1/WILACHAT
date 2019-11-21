@@ -15,7 +15,7 @@ pod 'Firebase/AdMob'
 pod 'MBProgressHUD', '~> 1.1.0'
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
-
+pod 'SDWebImage', '~> 5.0'
 
 
   target 'SENIOR PROJECTTests' do

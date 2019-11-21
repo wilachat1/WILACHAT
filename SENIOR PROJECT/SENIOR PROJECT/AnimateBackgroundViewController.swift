@@ -35,6 +35,7 @@ class AnimateBackgroundViewController: UIViewController {
         ["#ffd700","#115173","#053f5e","#022c43"],
         ["#fffa67","#ffcd60","#ff8162","#d34848"],
         ["#537791","#c1c0b9","#f7f6e7","#e7e6e1"],
+        ["#537791","#c1c0b9","#f7f6e7","#e7e6e1"]
     ]
        
     override func viewDidLoad() {
@@ -63,7 +64,12 @@ class AnimateBackgroundViewController: UIViewController {
         NotificationCenter.default.addObserver(forName: Constants.levelUpNotification, object: nil, queue: .main) {  [weak self](noti) in
             var level = noti.userInfo?["level"] as? Int ?? 0
             level -= 1
-           
+            let circles = [self?.circle1,self?.circle2,self?.circle3,self?.circle4]
+            self?.animateCircle(level: level, views: circles as! [UIView], factor: factor)
+            let color = self?.allColor[level] ?? []
+            for (view,hex) in zip(circles,color) {
+                view?.backgroundColor = UIColor(hex: hex)
+            }
         
             
         }
@@ -73,22 +79,14 @@ class AnimateBackgroundViewController: UIViewController {
     func animateCircle (level : Int, views: [UIView], factor: CGFloat){
         guard level < allColor.count else { return }
         circle1WidthConstraints.constant = factor * 6.0
-        UIView.animate(withDuration: 1, delay: 0.2, options: [.curveEaseOut,.beginFromCurrentState, .autoreverse], animations: { self.circle1.layoutIfNeeded()
-            self.circle1.alpha = 0
+        UIView.animate(withDuration: 1, delay: 0.2, options: [.curveEaseOut,.beginFromCurrentState], animations: {
+            self.circle1.transform = CGAffineTransform.init(scaleX: 6, y: 6)
         } , completion: { (fin) in
-            UIView.animate(withDuration: 0.4, delay: 0, options: [.curveEaseOut,.beginFromCurrentState], animations: { self.circle1.layoutIfNeeded()
-            let currentColor = self.allColor[level]
-            views.enumerated().forEach({ (index,view) in
-                let color = currentColor[index]
-                view.backgroundColor = UIColor(hex: color)
-            })
-            },  completion: { (finish) in
-        })
+            
     })
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3){
-            self.circle1.alpha = 1
-            self.circle1WidthConstraints.constant = factor
-            UIView.animate(withDuration: 1, delay: 0, options: [.curveEaseOut,.beginFromCurrentState,.autoreverse], animations: {self.circle1.layoutIfNeeded()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1){
+            UIView.animate(withDuration: 1, delay: 0, options: [.curveEaseOut,.beginFromCurrentState], animations: {
+                self.circle1.transform = .identity
             })
         }
         
@@ -114,12 +112,12 @@ extension UIColor {
 
             if hexColor.count == 6 {
                 let scanner = Scanner(string: hexColor)
-                var hexNumber: UInt64 = 0
+                var hexNumber: UInt32 = 0
 
-                if scanner.scanHexInt64(&hexNumber) {
-                    r = CGFloat((hexNumber & 0xff000000) >> 24) / 255
-                    g = CGFloat((hexNumber & 0x00ff0000) >> 16) / 255
-                    b = CGFloat((hexNumber & 0x0000ff00) >> 8) / 255
+                if scanner.scanHexInt32(&hexNumber) {
+                    r = CGFloat((hexNumber & 0xff0000) >> 16) / 255
+                    g = CGFloat((hexNumber & 0x00ff00) >> 8) / 255
+                    b = CGFloat((hexNumber & 0x0000ff) >> 0) / 255
                     a = 1
 
                     self.init(red: r, green: g, blue: b, alpha: a)
