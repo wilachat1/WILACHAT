@@ -8,12 +8,16 @@
 
 import UIKit
 import AudioToolbox
+import GoogleMobileAds
+
 
 private let reuseIdentifier = "gameItemsID"
 
 
 
 class GameplayCollectionViewController: UIViewController {
+    var bannerView: GADBannerView!
+
     @IBOutlet weak var backGroungImage: UIImageView!
     var numberOfChoice:[Bool] = [Bool]()
     var countdown: Timer?
@@ -59,8 +63,40 @@ class GameplayCollectionViewController: UIViewController {
         
         view.backgroundColor = UIColor(patternImage:UIImage(named: "bg") ?? UIImage())
    createBackground()
+        // In this case, we instantiate the banner with desired ad size.
+        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        #if DEBUG
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        #else
+         bannerView.adUnitID = AdsId
+        #endif
+        bannerView.rootViewController = self
+        addBannerViewToView(bannerView)
+        bannerView.load(GADRequest())
     }
     
+    
+    
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+       bannerView.translatesAutoresizingMaskIntoConstraints = false
+       view.addSubview(bannerView)
+       view.addConstraints(
+         [NSLayoutConstraint(item: bannerView,
+                             attribute: .bottom,
+                             relatedBy: .equal,
+                             toItem: bottomLayoutGuide,
+                             attribute: .top,
+                             multiplier: 1,
+                             constant: 0),
+          NSLayoutConstraint(item: bannerView,
+                             attribute: .centerX,
+                             relatedBy: .equal,
+                             toItem: view,
+                             attribute: .centerX,
+                             multiplier: 1,
+                             constant: 0)
+         ])
+      }
     
     func createBackground() {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AnimateBackgroundViewController") as? AnimateBackgroundViewController else{
@@ -166,7 +202,7 @@ class GameplayCollectionViewController: UIViewController {
     
     func prepareGamePlay(){
         let randomChoice = Int(arc4random() % 7 + 2)
-        let correctPercentage = Int(arc4random() % 60 + 10)
+        let correctPercentage =  Int(arc4random() % 60 + 10)
         numberOfChoice = RandomManager.shared.random(numberOfChoice:
             randomChoice, percentage: correctPercentage)
         collectionView.reloadData()

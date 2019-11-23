@@ -17,13 +17,16 @@ class Constants: NSObject {
     static let skipSaveKey: String = "SKIP_KEY"
     static let hintSaveKey: String = "HINT_KEY"
     static let scoreMultiplier: Int = 50
-    static let levelStep: Array = [0,500,1250,2250,3500,4200,5600,6800,8150,9150,10150,11150]
-    static let hintstep: Array = [1,1,2,2,2,2,2,2,2,2,2,2]
-    static let skipstep: Array = [0,0,0,1,0,1,0,1,0,1,0,1]
+    static let levelStep: Array = [0,500,1250,2250,3500,4200,5600,6800,8150,9150,10150,11150,15000,20000,25000,30000,35000,40000,45000,50000,55000,60000,65000,70000,75000,80000,85000,90000,95000,100000]
+    static let hintstep: Array = [1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]
+    static let skipstep: Array = [0,0,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1]
 
-    static let plusAmount: Int = 5
+    static let plusAmount: Int = 20
     
     static let levelUpNotification: NSNotification.Name =  NSNotification.Name(rawValue: "levelupNotification")
+    static let roundCountLimit: Int = 10
+    static let roundCountKey: String = "ROUND_COUNT_KEY"
+    
     
     
     

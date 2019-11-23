@@ -10,6 +10,12 @@ import UIKit
 import FBSDKCoreKit
 import RealmSwift
 import Firebase
+
+var AdsId: String {
+    let id = Bundle.main.object(forInfoDictionaryKey: "GADApplicationIdentifier") as! String
+    return id
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -54,11 +60,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let realm = try! Realm()
         
         
-//        if UserDefaults.standard.value(forKey: Constants.skipSaveKey) != nil {
-// return true
-//        }
-   UserDefaults.standard.set("40", forKey: Constants.skipSaveKey)
-        UserDefaults.standard.set("40", forKey: Constants.hintSaveKey)
+       if UserDefaults.standard.value(forKey: Constants.skipSaveKey) != nil {
+ return true
+        }
+   UserDefaults.standard.set("100", forKey: Constants.skipSaveKey)
+        UserDefaults.standard.set("100", forKey: Constants.hintSaveKey)
         UserDefaults.standard.synchronize()
         return true
         

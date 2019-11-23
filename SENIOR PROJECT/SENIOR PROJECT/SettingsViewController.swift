@@ -47,7 +47,9 @@ class SettingsViewController: UIViewController {
                #if DEBUG
            GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),
                withAdUnitID: "ca-app-pub-3940256099942544/1712485313")
-               #endif
+        #else
+        GADRewardBasedVideoAd.sharedInstance().load(GADRequest(), withAdUnitID: AdsId)
+        #endif
              
         
     }
@@ -99,7 +101,7 @@ extension UIView {
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOpacity = 0.1
         self.layer.shadowOffset = CGSize(width: 0, height: 3)
-       self.layer.shadowRadius = 8
+        self.layer.shadowRadius = 8
         self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
         self.layer.shouldRasterize = true
         self.layer.rasterizationScale = UIScreen.main.scale
@@ -149,3 +151,5 @@ extension SettingsViewController: GADRewardBasedVideoAdDelegate {
       print("Reward based video ad failed to load.")
     }
 }
+
+

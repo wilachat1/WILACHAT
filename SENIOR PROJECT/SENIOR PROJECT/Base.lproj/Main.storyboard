@@ -22,11 +22,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="34 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKy-56-jXN">
-                                <rect key="frame" x="316" y="719.5" width="70" height="52.5"/>
+                                <rect key="frame" x="316" y="742.5" width="70" height="29.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="jBZ-hg-cIe"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="45"/>
+                                <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -94,11 +94,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUn-dJ-Iyh">
-                                <rect key="frame" x="31" y="719.5" width="70" height="52.5"/>
+                                <rect key="frame" x="31" y="742.5" width="70" height="29.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="Mdm-wl-cCZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="45"/>
+                                <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -486,7 +486,7 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTI-sj-SlZ">
-                                <rect key="frame" x="0.0" y="762" width="130" height="46"/>
+                                <rect key="frame" x="0.0" y="712" width="130" height="46"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="5tv-lF-cxq"/>
@@ -533,7 +533,7 @@
                                 <size key="shadowOffset" width="2" height="2"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u30-Fb-ddU">
-                                <rect key="frame" x="284" y="763" width="130" height="45"/>
+                                <rect key="frame" x="284" y="713" width="130" height="45"/>
                                 <color key="backgroundColor" red="0.97647058823529409" green="0.82745098039215681" blue="0.25882352941176467" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Az9-gJ-ynr"/>
@@ -548,13 +548,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HINT(500)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HvN-LL-ljV">
-                                <rect key="frame" x="11" y="781" width="98" height="18"/>
+                                <rect key="frame" x="11" y="731" width="98" height="18"/>
                                 <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SKIP(500)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avh-Zr-Vym">
-                                <rect key="frame" x="304" y="781.5" width="100" height="18"/>
+                                <rect key="frame" x="304" y="731.5" width="100" height="18"/>
                                 <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -578,7 +578,7 @@
                             <constraint firstItem="hib-RW-wpp" firstAttribute="leading" secondItem="Ham-kg-6fq" secondAttribute="leading" id="T8s-Oc-Rw3"/>
                             <constraint firstItem="enN-LM-5gx" firstAttribute="top" secondItem="FSz-dx-U0K" secondAttribute="bottom" id="Van-L4-W0U"/>
                             <constraint firstItem="y5Y-K8-qg7" firstAttribute="top" secondItem="enN-LM-5gx" secondAttribute="bottom" id="Y2R-22-cnK"/>
-                            <constraint firstItem="u30-Fb-ddU" firstAttribute="bottom" secondItem="Ham-kg-6fq" secondAttribute="bottom" id="asC-pj-r9G"/>
+                            <constraint firstItem="u30-Fb-ddU" firstAttribute="bottom" secondItem="Ham-kg-6fq" secondAttribute="bottom" constant="-50" id="asC-pj-r9G"/>
                             <constraint firstItem="f2p-4f-G2g" firstAttribute="top" secondItem="Ham-kg-6fq" secondAttribute="bottom" id="bGd-dZ-HcT"/>
                             <constraint firstItem="Ham-kg-6fq" firstAttribute="trailing" secondItem="hib-RW-wpp" secondAttribute="trailing" id="fF7-8h-XZZ"/>
                             <constraint firstItem="HvN-LL-ljV" firstAttribute="centerX" secondItem="UTI-sj-SlZ" secondAttribute="centerX" constant="-5" id="fMB-x9-UvS"/>
@@ -586,7 +586,7 @@
                             <constraint firstItem="hib-RW-wpp" firstAttribute="centerX" secondItem="Ham-kg-6fq" secondAttribute="centerX" id="hlb-eb-dKp"/>
                             <constraint firstItem="f2p-4f-G2g" firstAttribute="bottom" secondItem="lga-5v-7XT" secondAttribute="bottom" constant="1" id="lyx-eA-OcS"/>
                             <constraint firstItem="HvN-LL-ljV" firstAttribute="centerY" secondItem="UTI-sj-SlZ" secondAttribute="centerY" constant="5" id="rFM-yK-n8Q"/>
-                            <constraint firstItem="UTI-sj-SlZ" firstAttribute="bottom" secondItem="Ham-kg-6fq" secondAttribute="bottom" id="rtg-MW-qtr"/>
+                            <constraint firstItem="UTI-sj-SlZ" firstAttribute="bottom" secondItem="Ham-kg-6fq" secondAttribute="bottom" constant="-50" id="rtg-MW-qtr"/>
                             <constraint firstItem="avh-Zr-Vym" firstAttribute="centerY" secondItem="u30-Fb-ddU" secondAttribute="centerY" constant="5" id="wkE-ZO-WUF"/>
                             <constraint firstItem="Ham-kg-6fq" firstAttribute="trailing" secondItem="f2p-4f-G2g" secondAttribute="trailing" id="y8w-dc-TAJ"/>
                             <constraint firstItem="uwO-F1-m3d" firstAttribute="centerX" secondItem="Ham-kg-6fq" secondAttribute="centerX" id="yXP-Kl-aXN"/>
@@ -980,6 +980,7 @@
         <image name="sound_on_button" width="149.5" height="160"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Oya-GA-CEo"/>
         <segue reference="Nbd-X8-aAX"/>
         <segue reference="Y0E-Cj-57H"/>
     </inferredMetricsTieBreakers>

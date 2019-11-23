@@ -10,6 +10,8 @@ import UIKit
 import RealmSwift
 import Firebase
 import FBSDKCoreKit
+import GoogleMobileAds
+import MBProgressHUD
 
 class ShowScoreViewController: UIViewController {
   
@@ -29,6 +31,7 @@ class ShowScoreViewController: UIViewController {
     
     
     var score: UserScore?
+    var interstitial: GADInterstitial!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,9 +46,57 @@ class ShowScoreViewController: UIViewController {
         scoreLabel.text = "\(score?.score ?? 0)".addComma
         levelLabel.text = "\(score?.level ?? 1)"
         updateUserScore()
+       
+        }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+       roundCountToShowAds()
+        
+    }
+
+    
+    func roundCountToShowAds(){
+        if let countStr = UserDefaults.standard.value(forKey: Constants.roundCountKey) as? String {
+                   let count =  countLimit(Int(countStr) ?? 1 )
+                   UserDefaults.standard.set("\(count)", forKey: Constants.roundCountKey)
+                   UserDefaults.standard.synchronize()
+                   
+                   
+               }else {
+                   UserDefaults.standard.set("1", forKey: Constants.roundCountKey)
+                   UserDefaults.standard.synchronize()
+               }
+    }
+
+    func countLimit(_ count: Int) ->Int{
+        var input = count
+        if input < Constants.roundCountLimit {
+            input += 1
+            
+        }else{
+            input = 0
+            showAds()
+        }
+        return input
     }
     
-
+    func showAds() {
+        MBProgressHUD.showAdded(to: view, animated: true)
+        playAgainLabel.isEnabled = false
+        goHomeLabel.isEnabled = false
+        #if DEBUG
+             interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        #else
+        interstital = GADInterstital(adUnitID: AdsId)
+        #endif
+        interstitial.delegate = self
+               let request = GADRequest()
+               interstitial.load(request)
+        if interstitial.isReady {
+          interstitial.present(fromRootViewController: self)
+        }
+    }
     
     // MARK: - Navigation
 
@@ -99,4 +150,53 @@ class ShowScoreViewController: UIViewController {
 
     
 
+}
+
+extension ShowScoreViewController: GADInterstitialDelegate{
+    /// Tells the delegate an ad request succeeded.
+   func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+    MBProgressHUD.hide(for: view, animated: true)
+    print("interstitialDidReceiveAd")
+        if interstitial.isReady {
+            interstitial.present(fromRootViewController: self)
+        }
+    }
+
+    /// Tells the delegate an ad request failed.
+    func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
+     MBProgressHUD.hide(for: view, animated: true)
+
+        print("interstitial:didFailToReceiveAdWithError: \(error.localizedDescription)")
+    }
+
+    /// Tells the delegate that an interstitial will be presented.
+    func interstitialWillPresentScreen(_ ad: GADInterstitial) {
+    MBProgressHUD.hide(for: view, animated: true)
+
+        print("interstitialWillPresentScreen")
+    }
+
+    /// Tells the delegate the interstitial is to be animated off the screen.
+    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
+     MBProgressHUD.hide(for: view, animated: true)
+
+        print("interstitialWillDismissScreen")
+    }
+
+    /// Tells the delegate the interstitial had been animated off the screen.
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+    MBProgressHUD.hide(for: view, animated: true)
+
+        print("interstitialDidDismissScreen")
+        playAgainLabel.isEnabled = true
+        goHomeLabel.isEnabled = true 
+    }
+
+    /// Tells the delegate that a user click will open another app
+    /// (such as the App Store), backgrounding the current app.
+    func interstitialWillLeaveApplication(_ ad: GADInterstitial) {
+    MBProgressHUD.hide(for: view, animated: true)
+
+        print("interstitialWillLeaveApplication")
+    }
 }

@@ -25,17 +25,42 @@ class AnimateBackgroundViewController: UIViewController {
    
     let allColor = [
         ["#413B48","#93606E","#C47270","#DB9A7C",] ,
-        ["#3c4245","#5f6769","#719192","#dfcdc3",] ,
-        ["#ee4540","#c72c41","#801336","#2d132c",] ,
-        ["#494949","#fffdf6","#ece8d9","#faf6e9"],
+     
+    ["#3c4245","#5f6769","#719192","#dfcdc3",] ,
+    ["#032a33","#255965","#4c6f7b","#f1d18a"] ,
+    //        ["#ee4540","#c72c41","#801336","#2d132c",] ,
+        ["#003B73","#0074B7","#60A3D9","#BFD7ED"],
+        //["#494949","#fffdf6","#ece8d9","#faf6e9"],
         ["#5c8d89","#74b49b","#a7d7c5","#f9f8eb"],
         ["#248ea9","#28c3d4","#aee7e8","#fafdcb"],
-        ["#ee4540","#c72c41","#801336","#2d132c"],
-        ["#142d4c","#385170","#9fd3c7","#ececec"],
+["#FAFAF0","#F36870","#FFF593","#74B2D0"],
+        //        ["#ee4540","#c72c41","#801336","#2d132c"],
+        ["#ebebeb","#fec100","#528078","#3e615b"],
+        //        ["#142d4c","#385170","#9fd3c7","#ececec"],
         ["#ffd700","#115173","#053f5e","#022c43"],
         ["#fffa67","#ffcd60","#ff8162","#d34848"],
         ["#537791","#c1c0b9","#f7f6e7","#e7e6e1"],
-        ["#537791","#c1c0b9","#f7f6e7","#e7e6e1"]
+       ["#9d0b0b","#da2d2d","#eb8242","#f6da63"],
+            ["#9d0b0b","#da2d2d","#eb8242","#f6da63"],
+             ["#000000","#FF4A3B","#FFF797","#E34234"],
+                ["#000000","#FF4A3B","#FFF797","#E34234"],
+                   ["#000000","#FF4A3B","#FFF797","#E34234"],
+                      ["#000000","#FF4A3B","#FFF797","#E34234"],
+                         ["#000000","#FF4A3B","#FFF797","#E34234"],
+                            ["#000000","#FF4A3B","#FFF797","#E34234"],
+                               ["#000000","#FF4A3B","#FFF797","#E34234"],
+                                  ["#000000","#FF4A3B","#FFF797","#E34234"],
+                                     ["#000000","#FF4A3B","#FFF797","#E34234"],
+                                        ["#000000","#FF4A3B","#FFF797","#E34234"],
+                                           ["#000000","#FF4A3B","#FFF797","#E34234"],
+                                              ["#000000","#FF4A3B","#FFF797","#E34234"],
+                                                 ["#000000","#FF4A3B","#FFF797","#E34234"],
+                                                    ["#000000","#FF4A3B","#FFF797","#E34234"],
+                                                       ["#000000","#FF4A3B","#FFF797","#E34234"],
+                                                          ["#000000","#FF4A3B","#FFF797","#E34234"],
+                                                             ["#000000","#FF4A3B","#FFF797","#E34234"]
+                                                             
+//        ["#537791","#c1c0b9","#f7f6e7","#e7e6e1"]
     ]
        
     override func viewDidLoad() {
@@ -65,7 +90,7 @@ class AnimateBackgroundViewController: UIViewController {
             var level = noti.userInfo?["level"] as? Int ?? 0
             level -= 1
             let circles = [self?.circle1,self?.circle2,self?.circle3,self?.circle4]
-            self?.animateCircle(level: level, views: circles as! [UIView], factor: factor)
+//            self?.animateCircle(level: level, views: circles as! [UIView], factor: factor)
             let color = self?.allColor[level] ?? []
             for (view,hex) in zip(circles,color) {
                 view?.backgroundColor = UIColor(hex: hex)
