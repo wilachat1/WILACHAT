@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z3i-CV-Qtj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z3i-CV-Qtj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -110,6 +110,21 @@
                                     <constraint firstAttribute="height" constant="40" id="gyv-LW-k3o"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qW1-ZX-rLb">
+                                <rect key="frame" x="165.5" y="768" width="83" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="me0-O2-nKi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="25"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="SHARE">
+                                    <color key="titleColor" red="1" green="1" blue="0.4510916096" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareHandler:" destination="y5F-dL-Gdp" eventType="touchUpInside" id="aLS-SM-2SD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1137254902" green="0.41568627450000001" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -117,6 +132,7 @@
                             <constraint firstItem="DWr-Nc-F6B" firstAttribute="trailing" secondItem="bKy-56-jXN" secondAttribute="trailing" constant="28" id="5Cm-e6-ucg"/>
                             <constraint firstItem="EZ8-13-s4l" firstAttribute="centerY" secondItem="lTn-Lu-WXM" secondAttribute="centerY" id="7yt-p9-YbX"/>
                             <constraint firstItem="EZ8-13-s4l" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="DWr-Nc-F6B" secondAttribute="leading" constant="5" id="8HY-CP-XKp"/>
+                            <constraint firstItem="qW1-ZX-rLb" firstAttribute="centerX" secondItem="DWr-Nc-F6B" secondAttribute="centerX" id="CO8-7u-Nkq"/>
                             <constraint firstItem="DWr-Nc-F6B" firstAttribute="trailing" secondItem="7DN-VR-x2V" secondAttribute="trailing" constant="30" id="Ivv-Qu-VhV"/>
                             <constraint firstItem="lTn-Lu-WXM" firstAttribute="centerX" secondItem="DWr-Nc-F6B" secondAttribute="centerX" id="Lhr-5K-Ymk"/>
                             <constraint firstItem="7DN-VR-x2V" firstAttribute="centerY" secondItem="DWr-Nc-F6B" secondAttribute="centerY" constant="-165" id="OZQ-O6-fcP"/>
@@ -131,6 +147,7 @@
                             <constraint firstItem="lTn-Lu-WXM" firstAttribute="leading" relation="lessThanOrEqual" secondItem="EZ8-13-s4l" secondAttribute="trailing" constant="-20" id="gKE-oU-cub"/>
                             <constraint firstItem="jvo-WO-7q6" firstAttribute="centerX" secondItem="7DN-VR-x2V" secondAttribute="centerX" id="nIl-Lq-ni2"/>
                             <constraint firstItem="7DN-VR-x2V" firstAttribute="leading" secondItem="DWr-Nc-F6B" secondAttribute="leading" constant="30" id="oZg-lm-2yu"/>
+                            <constraint firstItem="DWr-Nc-F6B" firstAttribute="bottom" secondItem="qW1-ZX-rLb" secondAttribute="bottom" constant="10" id="pUg-gM-tew"/>
                             <constraint firstItem="wfB-8s-GAG" firstAttribute="leading" relation="lessThanOrEqual" secondItem="lTn-Lu-WXM" secondAttribute="trailing" constant="-20" id="pgp-v2-kaV"/>
                             <constraint firstItem="lTn-Lu-WXM" firstAttribute="centerY" secondItem="DWr-Nc-F6B" secondAttribute="centerY" constant="150" id="qAe-s4-p6H"/>
                             <constraint firstItem="DWr-Nc-F6B" firstAttribute="bottom" secondItem="Uo3-fZ-dzY" secondAttribute="bottom" constant="10" id="stj-lm-JRx"/>
@@ -146,6 +163,7 @@
                         <outlet property="facebookButton" destination="zod-7L-oyJ" id="5ev-fb-WfZ"/>
                         <outlet property="firstStartButton" destination="lTn-Lu-WXM" id="gX8-zH-ksr"/>
                         <outlet property="hintLabel" destination="iUn-dJ-Iyh" id="eR0-75-gmM"/>
+                        <outlet property="shareButton" destination="qW1-ZX-rLb" id="zzY-2p-y1o"/>
                         <outlet property="showHighScore" destination="jvo-WO-7q6" id="f9U-YD-3Kq"/>
                         <outlet property="skipLabel" destination="bKy-56-jXN" id="Eew-qS-U2U"/>
                     </connections>
@@ -503,7 +521,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FSz-dx-U0K">
                                 <rect key="frame" x="20" y="15" width="374" height="60.5"/>
                                 <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="65"/>
-                                <color key="textColor" red="0.92798737046632129" green="0.92670279600395344" blue="0.89817948535302983" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="0.40282534246575341" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="2" height="2"/>
@@ -511,7 +529,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEVEL 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enN-LM-5gx">
                                 <rect key="frame" x="152" y="75.5" width="110" height="29"/>
                                 <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="0.40464469178082191" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="2" height="2"/>
@@ -519,7 +537,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LUCKY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5Y-K8-qg7">
                                 <rect key="frame" x="179.5" y="104.5" width="55" height="17.5"/>
                                 <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="0.40464469180000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="2" height="2"/>
@@ -980,7 +998,6 @@
         <image name="sound_on_button" width="149.5" height="160"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Oya-GA-CEo"/>
         <segue reference="Nbd-X8-aAX"/>
         <segue reference="Y0E-Cj-57H"/>
     </inferredMetricsTieBreakers>

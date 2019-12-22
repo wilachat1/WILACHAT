@@ -65,11 +65,11 @@ class GameplayCollectionViewController: UIViewController {
    createBackground()
         // In this case, we instantiate the banner with desired ad size.
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
-        #if DEBUG
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
-        #else
-         bannerView.adUnitID = AdsId
-        #endif
+//        #if DEBUG
+        bannerView.adUnitID = "ca-app-pub-5621209397277761/5702143779"
+//        #else
+//         bannerView.adUnitID = "ca-app-pub-5621209397277761~1385578527"
+//        #endif
         bannerView.rootViewController = self
         addBannerViewToView(bannerView)
         bannerView.load(GADRequest())
@@ -202,7 +202,7 @@ class GameplayCollectionViewController: UIViewController {
     
     func prepareGamePlay(){
         let randomChoice = Int(arc4random() % 7 + 2)
-        let correctPercentage =  Int(arc4random() % 60 + 10)
+        let correctPercentage = Int(arc4random() % 60 + 10)
         numberOfChoice = RandomManager.shared.random(numberOfChoice:
             randomChoice, percentage: correctPercentage)
         collectionView.reloadData()

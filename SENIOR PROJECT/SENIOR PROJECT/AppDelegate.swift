@@ -57,14 +57,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Now that we've told Realm how to handle the schema change, opening the file
         // will automatically perform the migration
-        let realm = try! Realm()
+let realm = try! Realm()
         
         
        if UserDefaults.standard.value(forKey: Constants.skipSaveKey) != nil {
  return true
         }
-   UserDefaults.standard.set("100", forKey: Constants.skipSaveKey)
-        UserDefaults.standard.set("100", forKey: Constants.hintSaveKey)
+   UserDefaults.standard.set("300", forKey: Constants.skipSaveKey)
+        UserDefaults.standard.set("300", forKey: Constants.hintSaveKey)
         UserDefaults.standard.synchronize()
         return true
         
