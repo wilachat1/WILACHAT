@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z3i-CV-Qtj">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z3i-CV-Qtj">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,11 +20,11 @@
             <objects>
                 <viewController id="y5F-dL-Gdp" customClass="ViewController" customModule="SENIOR_PROJECT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DkE-Wi-wQ7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="34 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKy-56-jXN">
-                                <rect key="frame" x="316" y="742.5" width="70" height="29.5"/>
+                                <rect key="frame" x="316" y="809.5" width="70" height="22.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="jBZ-hg-cIe"/>
                                 </constraints>
@@ -31,7 +33,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZ8-13-s4l">
-                                <rect key="frame" x="17" y="494" width="120" height="120"/>
+                                <rect key="frame" x="17" y="543" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EZ8-13-s4l" secondAttribute="height" multiplier="1:1" id="CW3-w8-vkz"/>
                                     <constraint firstAttribute="height" constant="120" id="n4R-Hd-WJf"/>
@@ -44,7 +46,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfB-8s-GAG">
-                                <rect key="frame" x="289.5" y="494" width="120" height="120"/>
+                                <rect key="frame" x="289.5" y="543" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="6a8-6S-KDg"/>
                                     <constraint firstAttribute="width" constant="120" id="DnS-uo-qh1"/>
@@ -57,7 +59,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTn-Lu-WXM">
-                                <rect key="frame" x="117" y="464" width="180" height="180"/>
+                                <rect key="frame" x="117" y="513" width="180" height="180"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="3G0-07-QzN"/>
@@ -71,16 +73,16 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SKIP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIe-7v-zI3">
-                                <rect key="frame" x="326.5" y="772" width="49" height="26"/>
+                                <rect key="frame" x="324.5" y="832" width="53" height="20"/>
                                 <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="game_logo" translatesAutoresizingMaskIntoConstraints="NO" id="7DN-VR-x2V">
-                                <rect key="frame" x="30" y="-181.5" width="354" height="841"/>
+                                <rect key="frame" x="30" y="78" width="354" height="420.50000000000011"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BEST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvo-WO-7q6">
-                                <rect key="frame" x="174.5" y="638.5" width="65" height="31.5"/>
+                                <rect key="frame" x="176.5" y="477.5" width="61" height="24.5"/>
                                 <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="0.4510916095890411" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -88,13 +90,13 @@
                                 <size key="shadowOffset" width="2" height="2"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HINTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uo3-fZ-dzY">
-                                <rect key="frame" x="34" y="772" width="64" height="26"/>
+                                <rect key="frame" x="34" y="832" width="64" height="20"/>
                                 <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUn-dJ-Iyh">
-                                <rect key="frame" x="31" y="742.5" width="70" height="29.5"/>
+                                <rect key="frame" x="31" y="809.5" width="70" height="22.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="Mdm-wl-cCZ"/>
                                 </constraints>
@@ -103,26 +105,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zod-7L-oyJ">
-                                <rect key="frame" x="107" y="680" width="200" height="40"/>
+                                <rect key="frame" x="107" y="729" width="200" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="PAt-BO-Rdc"/>
                                     <constraint firstAttribute="height" constant="40" id="gyv-LW-k3o"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qW1-ZX-rLb">
-                                <rect key="frame" x="165.5" y="768" width="83" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="me0-O2-nKi"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJD-6L-gLt">
+                                <rect key="frame" x="176" y="827" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="25"/>
-                                <size key="titleShadowOffset" width="2" height="2"/>
-                                <state key="normal" title="SHARE">
-                                    <color key="titleColor" red="1" green="1" blue="0.4510916096" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" red="0.92549019610000005" green="0.80000000000000004" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="shareHandler:" destination="y5F-dL-Gdp" eventType="touchUpInside" id="aLS-SM-2SD"/>
+                                    <action selector="shareHandler:" destination="y5F-dL-Gdp" eventType="touchUpInside" id="bJJ-Ko-B7J"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -132,7 +130,6 @@
                             <constraint firstItem="DWr-Nc-F6B" firstAttribute="trailing" secondItem="bKy-56-jXN" secondAttribute="trailing" constant="28" id="5Cm-e6-ucg"/>
                             <constraint firstItem="EZ8-13-s4l" firstAttribute="centerY" secondItem="lTn-Lu-WXM" secondAttribute="centerY" id="7yt-p9-YbX"/>
                             <constraint firstItem="EZ8-13-s4l" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="DWr-Nc-F6B" secondAttribute="leading" constant="5" id="8HY-CP-XKp"/>
-                            <constraint firstItem="qW1-ZX-rLb" firstAttribute="centerX" secondItem="DWr-Nc-F6B" secondAttribute="centerX" id="CO8-7u-Nkq"/>
                             <constraint firstItem="DWr-Nc-F6B" firstAttribute="trailing" secondItem="7DN-VR-x2V" secondAttribute="trailing" constant="30" id="Ivv-Qu-VhV"/>
                             <constraint firstItem="lTn-Lu-WXM" firstAttribute="centerX" secondItem="DWr-Nc-F6B" secondAttribute="centerX" id="Lhr-5K-Ymk"/>
                             <constraint firstItem="7DN-VR-x2V" firstAttribute="centerY" secondItem="DWr-Nc-F6B" secondAttribute="centerY" constant="-165" id="OZQ-O6-fcP"/>
@@ -147,7 +144,6 @@
                             <constraint firstItem="lTn-Lu-WXM" firstAttribute="leading" relation="lessThanOrEqual" secondItem="EZ8-13-s4l" secondAttribute="trailing" constant="-20" id="gKE-oU-cub"/>
                             <constraint firstItem="jvo-WO-7q6" firstAttribute="centerX" secondItem="7DN-VR-x2V" secondAttribute="centerX" id="nIl-Lq-ni2"/>
                             <constraint firstItem="7DN-VR-x2V" firstAttribute="leading" secondItem="DWr-Nc-F6B" secondAttribute="leading" constant="30" id="oZg-lm-2yu"/>
-                            <constraint firstItem="DWr-Nc-F6B" firstAttribute="bottom" secondItem="qW1-ZX-rLb" secondAttribute="bottom" constant="10" id="pUg-gM-tew"/>
                             <constraint firstItem="wfB-8s-GAG" firstAttribute="leading" relation="lessThanOrEqual" secondItem="lTn-Lu-WXM" secondAttribute="trailing" constant="-20" id="pgp-v2-kaV"/>
                             <constraint firstItem="lTn-Lu-WXM" firstAttribute="centerY" secondItem="DWr-Nc-F6B" secondAttribute="centerY" constant="150" id="qAe-s4-p6H"/>
                             <constraint firstItem="DWr-Nc-F6B" firstAttribute="bottom" secondItem="Uo3-fZ-dzY" secondAttribute="bottom" constant="10" id="stj-lm-JRx"/>
@@ -163,7 +159,7 @@
                         <outlet property="facebookButton" destination="zod-7L-oyJ" id="5ev-fb-WfZ"/>
                         <outlet property="firstStartButton" destination="lTn-Lu-WXM" id="gX8-zH-ksr"/>
                         <outlet property="hintLabel" destination="iUn-dJ-Iyh" id="eR0-75-gmM"/>
-                        <outlet property="shareButton" destination="qW1-ZX-rLb" id="zzY-2p-y1o"/>
+                        <outlet property="shareButton" destination="yJD-6L-gLt" id="NIG-DC-ZXP"/>
                         <outlet property="showHighScore" destination="jvo-WO-7q6" id="f9U-YD-3Kq"/>
                         <outlet property="skipLabel" destination="bKy-56-jXN" id="Eew-qS-U2U"/>
                     </connections>
@@ -177,7 +173,7 @@
             <objects>
                 <tableViewController id="bxk-BT-Qrq" customClass="HighScoreTableViewController" customModule="SENIOR_PROJECT" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="kW0-TG-ASJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="RhT-BR-dbQ">
@@ -185,7 +181,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuT-Ph-15g">
-                                    <rect key="frame" x="24.5" y="45.5" width="48.5" height="67.5"/>
+                                    <rect key="frame" x="57" y="68" width="16" height="22"/>
                                     <state key="normal" image="back_buton"/>
                                     <connections>
                                         <action selector="backHandler:" destination="bxk-BT-Qrq" eventType="touchUpInside" id="ZCH-Iv-bgt"/>
@@ -279,13 +275,13 @@
                                                     <size key="shadowOffset" width="2" height="2"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tkc-f6-rhP">
-                                                    <rect key="frame" x="35" y="0.0" width="120" height="146"/>
+                                                    <rect key="frame" x="35" y="0.0" width="146" height="146"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Nature1" translatesAutoresizingMaskIntoConstraints="NO" id="Gca-Jc-75d">
-                                                            <rect key="frame" x="10" y="10" width="100" height="126"/>
+                                                            <rect key="frame" x="10" y="10" width="126" height="126"/>
                                                         </imageView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_frame" translatesAutoresizingMaskIntoConstraints="NO" id="egC-Yf-uZ9">
-                                                            <rect key="frame" x="0.0" y="0.0" width="120" height="146"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="146" height="146"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -303,10 +299,10 @@
                                                     </constraints>
                                                 </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VvP-0C-p95">
-                                                    <rect key="frame" x="165" y="0.0" width="209" height="146"/>
+                                                    <rect key="frame" x="191" y="0.0" width="183" height="146"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WILACHAT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrY-nO-N5n">
-                                                            <rect key="frame" x="0.0" y="0.0" width="209" height="48.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="183" height="48.5"/>
                                                             <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -314,7 +310,7 @@
                                                             <size key="shadowOffset" width="2" height="2"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KhZ-QI-04s">
-                                                            <rect key="frame" x="0.0" y="48.5" width="209" height="49"/>
+                                                            <rect key="frame" x="0.0" y="48.5" width="183" height="49"/>
                                                             <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -322,7 +318,7 @@
                                                             <size key="shadowOffset" width="2" height="2"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEVEL 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUj-rW-7tx">
-                                                            <rect key="frame" x="0.0" y="97.5" width="209" height="48.5"/>
+                                                            <rect key="frame" x="0.0" y="97.5" width="183" height="48.5"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -374,13 +370,13 @@
                                                     <size key="shadowOffset" width="2" height="2"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1BR-7j-Gby">
-                                                    <rect key="frame" x="35" y="0.0" width="120" height="146"/>
+                                                    <rect key="frame" x="35" y="0.0" width="146" height="146"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Nature1" translatesAutoresizingMaskIntoConstraints="NO" id="c1j-gD-h43">
-                                                            <rect key="frame" x="10" y="10" width="100" height="126"/>
+                                                            <rect key="frame" x="10" y="10" width="126" height="126"/>
                                                         </imageView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_frame" translatesAutoresizingMaskIntoConstraints="NO" id="BrE-xd-SjF">
-                                                            <rect key="frame" x="0.0" y="0.0" width="120" height="146"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="146" height="146"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -398,10 +394,10 @@
                                                     </constraints>
                                                 </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="QBT-0e-XVm">
-                                                    <rect key="frame" x="165" y="0.0" width="209" height="146"/>
+                                                    <rect key="frame" x="191" y="0.0" width="183" height="146"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WILACHAT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTz-ei-TKa">
-                                                            <rect key="frame" x="0.0" y="0.0" width="209" height="48.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="183" height="48.5"/>
                                                             <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -409,7 +405,7 @@
                                                             <size key="shadowOffset" width="2" height="2"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVj-EY-9oe">
-                                                            <rect key="frame" x="0.0" y="48.5" width="209" height="49"/>
+                                                            <rect key="frame" x="0.0" y="48.5" width="183" height="49"/>
                                                             <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="40"/>
                                                             <color key="textColor" red="0.95294117649999999" green="0.70980392160000005" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
@@ -417,7 +413,7 @@
                                                             <size key="shadowOffset" width="2" height="2"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEVEL 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qj4-ou-mrW">
-                                                            <rect key="frame" x="0.0" y="97.5" width="209" height="48.5"/>
+                                                            <rect key="frame" x="0.0" y="97.5" width="183" height="48.5"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -466,11 +462,11 @@
             <objects>
                 <viewController id="kbl-Mi-lAr" customClass="GameplayCollectionViewController" customModule="SENIOR_PROJECT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lga-5v-7XT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hib-RW-wpp">
-                                <rect key="frame" x="0.0" y="182" width="414" height="414"/>
+                                <rect key="frame" x="0.0" y="231" width="414" height="414"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hib-RW-wpp" secondAttribute="height" multiplier="1:1" id="H0S-3K-PJT"/>
@@ -504,7 +500,7 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTI-sj-SlZ">
-                                <rect key="frame" x="0.0" y="712" width="130" height="46"/>
+                                <rect key="frame" x="0.0" y="766" width="130" height="46"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="5tv-lF-cxq"/>
@@ -519,31 +515,31 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FSz-dx-U0K">
-                                <rect key="frame" x="20" y="15" width="374" height="60.5"/>
+                                <rect key="frame" x="20" y="59" width="374" height="60.5"/>
                                 <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="65"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.92798737046632129" green="0.92670279600395344" blue="0.89817948535302983" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="0.40282534246575341" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="2" height="2"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEVEL 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enN-LM-5gx">
-                                <rect key="frame" x="152" y="75.5" width="110" height="29"/>
+                                <rect key="frame" x="152" y="119.5" width="110" height="29"/>
                                 <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="30"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="0.40464469178082191" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="2" height="2"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LUCKY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5Y-K8-qg7">
-                                <rect key="frame" x="179.5" y="104.5" width="55" height="17.5"/>
+                                <rect key="frame" x="179.5" y="148.5" width="55" height="17.5"/>
                                 <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="17"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="0.40464469180000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="2" height="2"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEVEL UP!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwO-F1-m3d">
-                                <rect key="frame" x="105" y="385" width="204" height="38"/>
+                                <rect key="frame" x="105" y="434" width="204" height="38"/>
                                 <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="40"/>
                                 <color key="textColor" red="1" green="0.68829668960000001" blue="0.099807478769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -551,7 +547,7 @@
                                 <size key="shadowOffset" width="2" height="2"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u30-Fb-ddU">
-                                <rect key="frame" x="284" y="713" width="130" height="45"/>
+                                <rect key="frame" x="284" y="767" width="130" height="45"/>
                                 <color key="backgroundColor" red="0.97647058823529409" green="0.82745098039215681" blue="0.25882352941176467" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Az9-gJ-ynr"/>
@@ -566,19 +562,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HINT(500)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HvN-LL-ljV">
-                                <rect key="frame" x="11" y="731" width="98" height="18"/>
+                                <rect key="frame" x="11" y="785" width="98" height="18"/>
                                 <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SKIP(500)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avh-Zr-Vym">
-                                <rect key="frame" x="304" y="731.5" width="100" height="18"/>
+                                <rect key="frame" x="304" y="785.5" width="100" height="18"/>
                                 <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2p-4f-G2g">
-                                <rect key="frame" x="0.0" y="808" width="414" height="35"/>
+                                <rect key="frame" x="0.0" y="862" width="414" height="35"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -634,16 +630,16 @@
             <objects>
                 <viewController id="Km5-Td-lIQ" customClass="ShowScoreViewController" customModule="SENIOR_PROJECT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gge-ab-1oB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,234,657" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DqC-4h-Ohe">
-                                <rect key="frame" x="-8" y="408.5" width="430" height="90"/>
+                                <rect key="frame" x="-8" y="457.5" width="430" height="90"/>
                                 <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="100"/>
                                 <color key="textColor" red="0.95294117647058818" green="0.70980392156862748" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4Q-DV-Sqs">
-                                <rect key="frame" x="80" y="664" width="100" height="100"/>
+                                <rect key="frame" x="80" y="718" width="100" height="100"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="6qF-pw-uD5"/>
@@ -657,7 +653,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WsE-Zj-OD1">
-                                <rect key="frame" x="234" y="664" width="100" height="100"/>
+                                <rect key="frame" x="234" y="718" width="100" height="100"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="QeK-P6-FEe"/>
@@ -671,7 +667,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e24-6i-v1m">
-                                <rect key="frame" x="126" y="379.5" width="162" height="49"/>
+                                <rect key="frame" x="126" y="428.5" width="162" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="162" id="Ytr-OA-T6L"/>
                                     <constraint firstAttribute="height" constant="49" id="pFX-uZ-s35"/>
@@ -681,7 +677,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEVEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVn-5T-bbL">
-                                <rect key="frame" x="140" y="172.5" width="135" height="40.5"/>
+                                <rect key="frame" x="140" y="216.5" width="135" height="40.5"/>
                                 <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="45"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -694,10 +690,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="game_over" translatesAutoresizingMaskIntoConstraints="NO" id="LRk-dB-VWV">
-                                <rect key="frame" x="50" y="20" width="315" height="117.5"/>
+                                <rect key="frame" x="50" y="64" width="315" height="117.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RrL-L3-HaW">
-                                <rect key="frame" x="165" y="193" width="85" height="90"/>
+                                <rect key="frame" x="165" y="237" width="85" height="90"/>
                                 <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="100"/>
                                 <color key="textColor" red="0.33946436643600464" green="0.68346071243286133" blue="0.84315949678421021" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -741,11 +737,11 @@
             <objects>
                 <viewController id="9eS-qU-QOM" customClass="SettingsViewController" customModule="SENIOR_PROJECT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5yG-i2-wz0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWS-Ee-djY">
-                                <rect key="frame" x="146.5" y="160" width="121" height="120"/>
+                                <rect key="frame" x="146.5" y="204" width="121" height="120"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="d83-s1-yBi"/>
@@ -756,7 +752,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XM6-Zj-aj4">
-                                <rect key="frame" x="49.5" y="436" width="315" height="95"/>
+                                <rect key="frame" x="49.5" y="480" width="315" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="AaQ-bz-LEO"/>
                                     <constraint firstAttribute="width" constant="315" id="Xo7-yQ-zTJ"/>
@@ -769,7 +765,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mev-Dt-7fW">
-                                <rect key="frame" x="49.5" y="323" width="315" height="95"/>
+                                <rect key="frame" x="49.5" y="367" width="315" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="2jD-tb-qbK"/>
                                     <constraint firstAttribute="width" constant="315" id="RLo-AL-amW"/>
@@ -782,13 +778,13 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="option" translatesAutoresizingMaskIntoConstraints="NO" id="bhp-O1-ipA">
-                                <rect key="frame" x="77" y="15" width="255" height="110"/>
+                                <rect key="frame" x="77" y="59" width="255" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="hvs-5D-Dx7"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yxu-Rh-1J2">
-                                <rect key="frame" x="15" y="37" width="49" height="67.5"/>
+                                <rect key="frame" x="15" y="81" width="49" height="67.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67.5" id="Jab-zr-Gfj"/>
                                     <constraint firstAttribute="width" constant="49" id="VYe-8C-llN"/>
@@ -799,7 +795,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WILACHAT VER 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0j-0e-WMA">
-                                <rect key="frame" x="262.5" y="795.5" width="128.5" height="15.5"/>
+                                <rect key="frame" x="262.5" y="849.5" width="128.5" height="15.5"/>
                                 <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -845,19 +841,19 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="188" id="P7E-zK-7nQ" customClass="nature1Cell" customModule="SENIOR_PROJECT" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="55.5" width="414" height="188"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="P7E-zK-7nQ" id="D17-iE-Fic">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="188"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="P7E-zK-7nQ" id="D17-iE-Fic">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="187.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x0G-2h-hzP">
-                                            <rect key="frame" x="10" y="10" width="168" height="168"/>
+                                            <rect key="frame" x="10" y="10" width="95" height="95"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="x0G-2h-hzP" secondAttribute="height" multiplier="1:1" id="ECq-2h-01q"/>
                                                 <constraint firstAttribute="height" constant="95" id="Mdi-hW-G0H"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6f9-AH-Vfc">
-                                            <rect key="frame" x="198" y="82" width="55.5" height="24"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Nature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6f9-AH-Vfc">
+                                            <rect key="frame" x="125" y="82" width="55.5" height="24"/>
                                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>

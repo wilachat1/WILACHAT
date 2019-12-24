@@ -48,7 +48,7 @@ class SettingsViewController: UIViewController {
            GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),
                withAdUnitID: "ca-app-pub-3940256099942544/1712485313")
         #else
-        GADRewardBasedVideoAd.sharedInstance().load(GADRequest(), withAdUnitID: AdsId)
+        GADRewardBasedVideoAd.sharedInstance().load(GADRequest(), withAdUnitID: "ca-app-pub-5621209397277761~1385578527")
         #endif
              
         

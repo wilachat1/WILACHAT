@@ -22,7 +22,6 @@ class ViewController: UIViewController {
   @IBOutlet weak var showHighScore: UILabel!
    
 
-    @IBOutlet weak var shareButton: UIButton!
     
     @IBOutlet weak var hintLabel:
     UILabel!
@@ -30,7 +29,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var skipLabel: UILabel!
     
     @IBOutlet weak var facebookButton: UIView!
-   
+    @IBOutlet weak var shareButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        firstStartButton.layer.cornerRadius = 15
@@ -44,8 +44,7 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         let realm = try! Realm()
         let userScore = realm.objects(UserScore.self).sorted(byKeyPath: "score",ascending: false).first
-   
-        showHighScore.text =  "BEST:\(userScore?.score ?? 0)"
+    showHighScore.text =  "BEST:\(userScore?.score ?? 0)"
         hintLabel.text = UserDefaults.standard.value(forKey: Constants.hintSaveKey) as? String ?? ""
          skipLabel.text = UserDefaults.standard.value(forKey: Constants.skipSaveKey) as? String ?? ""
         navigationController?.navigationBar.isHidden = true
@@ -62,14 +61,12 @@ class ViewController: UIViewController {
             }
         }
 }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        UIView.animate(withDuration: 0.8, delay: 0, options: [.autoreverse, .repeat, .allowUserInteraction], animations: {
+        UIView.animate(withDuration: 0.2, delay: 0, options: [.autoreverse, .repeat,.allowUserInteraction], animations: {
             self.shareButton.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
         }, completion: nil)
     }
-
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier  == "playgameSegue" {
@@ -90,19 +87,16 @@ class ViewController: UIViewController {
             }
         }
     }
-    
-    @IBAction func shareHandler(_ sender: Any) {
-  let url = URL(string: "https://apps.apple.com/th/app/lucky-or-lose/id1485140117?l=th")
-  let activityViewController =
-      UIActivityViewController(activityItems: [url],
-                               applicationActivities: nil)
-
-  present(activityViewController, animated: true) {
-      // ...
-  }
-
+    @IBAction func shareHandler(_ sender: UIButton) {
+        let url = URL(string: "https://apps.apple.com/th/app/lucky-or-lose/id1485140117?l=th")
+        let activityViewController =
+            UIActivityViewController(activityItems: [ url],
+                                     applicationActivities: nil)
+        
+        present(activityViewController, animated: true) {
+            // ...
+        }
     }
-    
     
 }
 

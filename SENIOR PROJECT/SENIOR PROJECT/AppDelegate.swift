@@ -10,6 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import RealmSwift
 import Firebase
+import GoogleMobileAds
 
 var AdsId: String {
     let id = Bundle.main.object(forInfoDictionaryKey: "GADApplicationIdentifier") as! String
@@ -25,14 +26,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
-        
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+
         // Use Firebase library to configure APIs.
         FirebaseApp.configure()
 
         // Initialize the Google Mobile Ads SDK.
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),
-        withAdUnitID: "ca-app-pub-3940256099942544/1712485313")
+        withAdUnitID: "ca-app-pub-5621209397277761~1385578527")
      
         // Inside your application(application:didFinishLaunchingWithOptions:)
         
