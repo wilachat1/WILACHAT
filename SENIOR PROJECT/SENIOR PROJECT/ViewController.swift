@@ -19,8 +19,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var firstStartButton: UIButton!
     
-  @IBOutlet weak var showHighScore: UILabel!
-   
+    @IBOutlet weak var showHighScore: UILabel!
+    
 
     @IBOutlet weak var shareButton: UIButton!
     
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         let realm = try! Realm()
         let userScore = realm.objects(UserScore.self).sorted(byKeyPath: "score",ascending: false).first
    
-        showHighScore.text =  "BEST:\(userScore?.score ?? 0)"
+        showHighScore.text =  "BEST: \(userScore?.score ?? 0)"
         hintLabel.text = UserDefaults.standard.value(forKey: Constants.hintSaveKey) as? String ?? ""
          skipLabel.text = UserDefaults.standard.value(forKey: Constants.skipSaveKey) as? String ?? ""
         navigationController?.navigationBar.isHidden = true
@@ -54,7 +54,6 @@ class ViewController: UIViewController {
             if (profile == nil) {
                 self?.facebookButton.isHidden = false
                 let loginButton = FBLoginButton(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
-//                loginButton.permissions = ["user_friends"]
                 loginButton.delegate = self
                 self?.facebookButton.addSubview(loginButton)
             }else{
@@ -65,6 +64,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        self.shareButton.layer.removeAllAnimations()
         UIView.animate(withDuration: 0.8, delay: 0, options: [.autoreverse, .repeat, .allowUserInteraction], animations: {
             self.shareButton.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
         }, completion: nil)

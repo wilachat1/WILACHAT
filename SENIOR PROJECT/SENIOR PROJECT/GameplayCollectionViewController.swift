@@ -9,6 +9,7 @@
 import UIKit
 import AudioToolbox
 import GoogleMobileAds
+import RealmSwift
 
 
 private let reuseIdentifier = "gameItemsID"
@@ -29,6 +30,10 @@ class GameplayCollectionViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var levelupLabel: UILabel!
+    @IBOutlet weak var achieveGoalLabel: UILabel!
+    @IBOutlet weak var checkedGoalIcon: UIImageView!
+    @IBOutlet weak var skipBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var hintBottomConstraint: NSLayoutConstraint!
     
     
     
@@ -55,7 +60,6 @@ class GameplayCollectionViewController: UIViewController {
  
 
         // Register cell classes
-//       self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         prepareGamePlay()
         navigationController?.isNavigationBarHidden = true
         
@@ -65,11 +69,12 @@ class GameplayCollectionViewController: UIViewController {
    createBackground()
         // In this case, we instantiate the banner with desired ad size.
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
-//        #if DEBUG
+        #if DEBUG
         bannerView.adUnitID = "ca-app-pub-5621209397277761/5702143779"
-//        #else
-//         bannerView.adUnitID = "ca-app-pub-5621209397277761~1385578527"
-//        #endif
+        #else
+         bannerView.adUnitID = "ca-app-pub-5621209397277761~1385578527"
+        #endif
+        bannerView.delegate = self
         bannerView.rootViewController = self
         addBannerViewToView(bannerView)
         bannerView.load(GADRequest())
@@ -246,6 +251,24 @@ class GameplayCollectionViewController: UIViewController {
         userScore?.score = score
         userScore?.level = level
         print(score)
+        let realm = try! Realm()
+        let hightScore = realm.objects(UserScore.self).sorted(byKeyPath: "score",ascending: false).first
+        checkedGoalIcon.isHidden = score < ((hightScore?.score ?? 0)+1000)
+        if !checkedGoalIcon.isHidden {
+            achieveGoalLabel.textColor = UIColor.init(hex: "#57B447")
+            UIView.animate(withDuration: 0.3,
+                           delay: 0,
+                           usingSpringWithDamping: 0.4,
+                           initialSpringVelocity: 0.8,
+                           options: [],
+                           animations: {
+                self.checkedGoalIcon.transform = CGAffineTransform.init(scaleX: 1.2, y: 1.2)
+                self.achieveGoalLabel.transform = CGAffineTransform.init(scaleX: 1.2, y: 1.2)
+            }, completion: nil)
+            let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .heavy)
+            impactFeedbackgenerator.prepare()
+            impactFeedbackgenerator.impactOccurred()
+        }
     }
     
     func getCurrentLevel () -> Int {
@@ -273,7 +296,11 @@ class GameplayCollectionViewController: UIViewController {
         super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(levelup(notification:)), name: Constants.levelUpNotification, object: nil)
         levelupLabel.alpha = 0
-    updateHintSkipButton()
+        updateHintSkipButton()
+        
+        let realm = try! Realm()
+        let userScore = realm.objects(UserScore.self).sorted(byKeyPath: "score",ascending: false).first
+        achieveGoalLabel.text =  "GOAL \((userScore?.score ?? 0) + 1000)"
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -381,5 +408,42 @@ extension String {
         formater.usesGroupingSeparator = true
         formater.numberStyle = .decimal
         return formater.string(from: number) ?? self
+    }
+}
+
+extension GameplayCollectionViewController: GADBannerViewDelegate{
+    /// Tells the delegate an ad request loaded an ad.
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+      print("adViewDidReceiveAd")
+        skipBottomConstraint.constant = 50
+        hintBottomConstraint.constant = 50
+    }
+
+    /// Tells the delegate an ad request failed.
+    func adView(_ bannerView: GADBannerView,
+        didFailToReceiveAdWithError error: GADRequestError) {
+      print("adView:didFailToReceiveAdWithError: \(error.localizedDescription)")
+    }
+
+    /// Tells the delegate that a full-screen view will be presented in response
+    /// to the user clicking on an ad.
+    func adViewWillPresentScreen(_ bannerView: GADBannerView) {
+      print("adViewWillPresentScreen")
+    }
+
+    /// Tells the delegate that the full-screen view will be dismissed.
+    func adViewWillDismissScreen(_ bannerView: GADBannerView) {
+      print("adViewWillDismissScreen")
+    }
+
+    /// Tells the delegate that the full-screen view has been dismissed.
+    func adViewDidDismissScreen(_ bannerView: GADBannerView) {
+      print("adViewDidDismissScreen")
+    }
+
+    /// Tells the delegate that a user click will open another app (such as
+    /// the App Store), backgrounding the current app.
+    func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
+      print("adViewWillLeaveApplication")
     }
 }
