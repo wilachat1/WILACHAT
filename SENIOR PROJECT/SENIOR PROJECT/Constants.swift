@@ -11,9 +11,9 @@ import UIKit
 class Constants: NSObject {
     
     static let collectionFactor: CGFloat = 0.4
-    static let collectionItemSize: CGSize = CGSize(width: 100, height: 100)
+static let collectionItemSize: CGSize = CGSize(width: 100, height: 100)
     static let countdownTimer: Double = 3.0
-    static let countdownFactor: Double = 0.01
+  static let countdownFactor: Double = 0.01
     static let skipSaveKey: String = "SKIP_KEY"
     static let hintSaveKey: String = "HINT_KEY"
     static let scoreMultiplier: Int = 50
@@ -21,7 +21,7 @@ class Constants: NSObject {
     static let hintstep: Array = [1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]
     static let skipstep: Array = [0,0,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1]
 
-    static let plusAmount: Int = 20
+static let plusAmount: Int = 50
     
     static let levelUpNotification: NSNotification.Name =  NSNotification.Name(rawValue: "levelupNotification")
     static let roundCountLimit: Int = 10
