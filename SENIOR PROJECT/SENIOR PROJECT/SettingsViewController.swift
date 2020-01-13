@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import MBProgressHUD
+import PKHUD
 
 enum BuyingType: String {
     case hint = "HINT_KEY"
@@ -61,7 +62,7 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func buySkipHandler(_ sender: UIButton) {
-    loadAds()
+        loadAds()
         currentBuyingType = .skip
     }
     
@@ -112,7 +113,7 @@ extension UIView {
 extension SettingsViewController: GADRewardBasedVideoAdDelegate {
     func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd,
         didRewardUserWith reward: GADAdReward) {
-      print("Reward received with currency: \(reward.type), amount \(reward.amount).")
+        print("Reward received with currency: \(reward.type), amount \(reward.amount).")
         updateSaveValue(type: currentBuyingType)
     }
 
@@ -138,6 +139,7 @@ extension SettingsViewController: GADRewardBasedVideoAdDelegate {
 
     func rewardBasedVideoAdDidClose(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
       print("Reward based video ad is closed.")
+        HUD.flash(.label("You've got \(Constants.plusAmount) \(currentBuyingType == .hint ? "HINTS" : "SKIP")"), onView: view, delay: 2, completion: nil)
     }
 
     func rewardBasedVideoAdWillLeaveApplication(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {

@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="34 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKy-56-jXN">
-                                <rect key="frame" x="316" y="750.5" width="70" height="22.5"/>
+                                <rect key="frame" x="316" y="737.5" width="70" height="29.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="jBZ-hg-cIe"/>
                                 </constraints>
@@ -71,7 +71,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SKIP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIe-7v-zI3">
-                                <rect key="frame" x="324.5" y="773" width="53" height="20"/>
+                                <rect key="frame" x="326.5" y="767" width="49" height="26"/>
                                 <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -83,7 +83,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BEST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvo-WO-7q6">
-                                <rect key="frame" x="171" y="360" width="72.5" height="29"/>
+                                <rect key="frame" x="168" y="360" width="78" height="37"/>
                                 <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="30"/>
                                 <color key="textColor" red="1" green="1" blue="0.4510916095890411" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -91,13 +91,13 @@
                                 <size key="shadowOffset" width="2" height="2"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HINTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uo3-fZ-dzY">
-                                <rect key="frame" x="34" y="773" width="64" height="20"/>
+                                <rect key="frame" x="34" y="767" width="64" height="26"/>
                                 <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUn-dJ-Iyh">
-                                <rect key="frame" x="31" y="750.5" width="70" height="22.5"/>
+                                <rect key="frame" x="31" y="737.5" width="70" height="29.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="Mdm-wl-cCZ"/>
                                 </constraints>
@@ -114,7 +114,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qW1-ZX-rLb">
-                                <rect key="frame" x="169.5" y="748" width="75" height="30"/>
+                                <rect key="frame" x="165.5" y="748" width="83" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="me0-O2-nKi"/>
                                 </constraints>
@@ -751,8 +751,8 @@
                                     <action selector="backHandler:" destination="9eS-qU-QOM" eventType="touchUpInside" id="4zZ-Bj-UxN"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WILACHAT VER 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0j-0e-WMA">
-                                <rect key="frame" x="262.5" y="795.5" width="128.5" height="15.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WILACHAT version 1.3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0j-0e-WMA">
+                                <rect key="frame" x="209" y="795" width="182" height="16"/>
                                 <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -962,7 +962,6 @@
         <image name="skip_button" width="179.5" height="71.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Oya-GA-CEo"/>
         <segue reference="Nbd-X8-aAX"/>
         <segue reference="Y0E-Cj-57H"/>
     </inferredMetricsTieBreakers>

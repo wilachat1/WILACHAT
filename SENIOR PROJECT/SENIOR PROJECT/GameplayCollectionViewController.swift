@@ -84,7 +84,7 @@ class GameplayCollectionViewController: UIViewController {
     
     func addBannerViewToView(_ bannerView: GADBannerView) {
        bannerView.translatesAutoresizingMaskIntoConstraints = false
-       view.addSubview(bannerView)
+       view.insertSubview(bannerView, belowSubview: hintButton)
        view.addConstraints(
          [NSLayoutConstraint(item: bannerView,
                              attribute: .bottom,
@@ -300,7 +300,8 @@ class GameplayCollectionViewController: UIViewController {
         
         let realm = try! Realm()
         let userScore = realm.objects(UserScore.self).sorted(byKeyPath: "score",ascending: false).first
-        achieveGoalLabel.text =  "GOAL \((userScore?.score ?? 0) + 1000)"
+        let goal = "\((userScore?.score ?? 0) + 1000)"
+        achieveGoalLabel.text =  "GOAL \(goal.addComma)"
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)

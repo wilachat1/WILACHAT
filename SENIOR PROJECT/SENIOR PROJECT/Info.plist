@@ -39,6 +39,8 @@
 	<string>Lucky or Lose </string>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-5621209397277761~1385578527</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<true/>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>

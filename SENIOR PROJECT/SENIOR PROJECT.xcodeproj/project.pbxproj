@@ -81,7 +81,7 @@
 		F51C093022EC20A7005BF599 /* ShowScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowScoreViewController.swift; sourceTree = "<group>"; };
 		F51FCC3523406D2100F1C30A /* AnimateBackgroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateBackgroundViewController.swift; sourceTree = "<group>"; };
 		F56F16F023123E74007C3BC5 /* FBAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBAccount.swift; sourceTree = "<group>"; };
-		F5713DB122BDCF2500068E36 /* SENIOR PROJECT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SENIOR PROJECT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5713DB122BDCF2500068E36 /* Lucky of Lose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lucky of Lose.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5713DB422BDCF2500068E36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5713DB622BDCF2500068E36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F5713DB922BDCF2500068E36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -185,7 +185,7 @@
 		F5713DB222BDCF2500068E36 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F5713DB122BDCF2500068E36 /* SENIOR PROJECT.app */,
+				F5713DB122BDCF2500068E36 /* Lucky of Lose.app */,
 				F5713DC522BDCF2700068E36 /* SENIOR PROJECTTests.xctest */,
 				F5713DD022BDCF2700068E36 /* SENIOR PROJECTUITests.xctest */,
 			);
@@ -261,7 +261,7 @@
 			);
 			name = "SENIOR PROJECT";
 			productName = "SENIOR PROJECT";
-			productReference = F5713DB122BDCF2500068E36 /* SENIOR PROJECT.app */;
+			productReference = F5713DB122BDCF2500068E36 /* Lucky of Lose.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F5713DC422BDCF2700068E36 /* SENIOR PROJECTTests */ = {
@@ -668,16 +668,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 4BACWR564G;
 				INFOPLIST_FILE = "SENIOR PROJECT/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wilachat.SENIOR-PROJECT";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Lucky of Lose";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -689,16 +689,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 4BACWR564G;
 				INFOPLIST_FILE = "SENIOR PROJECT/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wilachat.SENIOR-PROJECT";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Lucky of Lose";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
