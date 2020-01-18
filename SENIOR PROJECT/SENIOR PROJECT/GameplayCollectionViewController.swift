@@ -70,9 +70,9 @@ class GameplayCollectionViewController: UIViewController {
         // In this case, we instantiate the banner with desired ad size.
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
         #if DEBUG
-        bannerView.adUnitID = "ca-app-pub-5621209397277761/5702143779"
+            bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         #else
-         bannerView.adUnitID = "ca-app-pub-5621209397277761~1385578527"
+            bannerView.adUnitID = "ca-app-pub-5621209397277761/5702143779"
         #endif
         bannerView.delegate = self
         bannerView.rootViewController = self
@@ -251,9 +251,8 @@ class GameplayCollectionViewController: UIViewController {
         userScore?.score = score
         userScore?.level = level
         print(score)
-        let realm = try! Realm()
-        let hightScore = realm.objects(UserScore.self).sorted(byKeyPath: "score",ascending: false).first
-        checkedGoalIcon.isHidden = score < ((hightScore?.score ?? 0)+1000)
+      
+        checkedGoalIcon.isHidden = score < getCurrentGoal()
         if !checkedGoalIcon.isHidden {
             achieveGoalLabel.textColor = UIColor.init(hex: "#57B447")
             UIView.animate(withDuration: 0.3,
@@ -298,11 +297,19 @@ class GameplayCollectionViewController: UIViewController {
         levelupLabel.alpha = 0
         updateHintSkipButton()
         
-        let realm = try! Realm()
-        let userScore = realm.objects(UserScore.self).sorted(byKeyPath: "score",ascending: false).first
-        let goal = "\((userScore?.score ?? 0) + 1000)"
+       
+        let goal = "\(getCurrentGoal())"
         achieveGoalLabel.text =  "GOAL \(goal.addComma)"
     }
+    
+    func getCurrentGoal() -> Int{
+        
+        let realm = try! Realm()
+        let userScore = realm.objects(UserScore.self).sorted(byKeyPath: "score",ascending: false).first
+        let goalIndex = Constants.goalStep.firstIndex(where: { $0 > (userScore?.score ?? 0 )}) ?? 0
+        return Constants.goalStep[goalIndex]
+    }
+   
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self, name: Constants.levelUpNotification, object: nil)

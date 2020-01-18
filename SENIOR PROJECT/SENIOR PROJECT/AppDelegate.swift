@@ -63,10 +63,10 @@ let realm = try! Realm()
         
         
        if UserDefaults.standard.value(forKey: Constants.skipSaveKey) != nil {
-// return true
+return true
         }
-   UserDefaults.standard.set("1000", forKey: Constants.skipSaveKey)
-        UserDefaults.standard.set("1000", forKey: Constants.hintSaveKey)
+   UserDefaults.standard.set("300", forKey: Constants.skipSaveKey)
+        UserDefaults.standard.set("300", forKey: Constants.hintSaveKey)
         UserDefaults.standard.synchronize()
         return true
         

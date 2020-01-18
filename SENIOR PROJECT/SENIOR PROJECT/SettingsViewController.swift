@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import MBProgressHUD
 import PKHUD
+import AVKit
 
 enum BuyingType: String {
     case hint = "HINT_KEY"
@@ -32,6 +33,18 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var getMoreSkipButton: UIButton!
     @IBOutlet weak var musicOnButton: UIButton!
     
+    @IBAction func viewTutorialVideoButton(_ sender: Any) {
+        let path = Bundle.main.path(forResource: "Lucky or Lose tutorial ver 1", ofType: "mp4")
+        let videoURL = URL(fileURLWithPath: path ?? "")
+        let player = AVPlayer(url: videoURL)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.exitsFullScreenWhenPlaybackEnds = true
+        playerViewController.player = player
+        self.present(playerViewController, animated: true) {
+            playerViewController.player!.play()
+          
+        }
+    }
     
     @IBOutlet weak var aboutUsButton: UIButton!
     
@@ -49,7 +62,7 @@ class SettingsViewController: UIViewController {
            GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),
                withAdUnitID: "ca-app-pub-3940256099942544/1712485313")
         #else
-        GADRewardBasedVideoAd.sharedInstance().load(GADRequest(), withAdUnitID: "ca-app-pub-5621209397277761~1385578527")
+        GADRewardBasedVideoAd.sharedInstance().load(GADRequest(), withAdUnitID: "ca-app-pub-5621209397277761/1473757177")
         #endif
              
         

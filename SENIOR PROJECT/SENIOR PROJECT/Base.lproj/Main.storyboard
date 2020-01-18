@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z3i-CV-Qtj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z3i-CV-Qtj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +16,7 @@
         <!--View Controller-->
         <scene sceneID="Qhr-Ca-Rbh">
             <objects>
-                <viewController id="y5F-dL-Gdp" customClass="ViewController" customModule="SENIOR_PROJECT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="y5F-dL-Gdp" customClass="ViewController" customModule="Lucky_of_Lose" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DkE-Wi-wQ7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -178,7 +178,7 @@
         <!--High Score Table View Controller-->
         <scene sceneID="P8s-8e-DaT">
             <objects>
-                <tableViewController id="bxk-BT-Qrq" customClass="HighScoreTableViewController" customModule="SENIOR_PROJECT" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="bxk-BT-Qrq" customClass="HighScoreTableViewController" customModule="Lucky_of_Lose" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="kW0-TG-ASJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -211,7 +211,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HighScoreNameViewCell" rowHeight="168" id="tY0-mz-0wB" customClass="HighScoreNameViewCell" customModule="SENIOR_PROJECT" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HighScoreNameViewCell" rowHeight="168" id="tY0-mz-0wB" customClass="HighScoreNameViewCell" customModule="Lucky_of_Lose" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="203.5" width="414" height="168"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tY0-mz-0wB" id="xim-AK-4dy">
@@ -306,7 +306,7 @@
                                     <outlet property="levelLabel" destination="MUj-rW-7tx" id="JbX-xR-rYt"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HighScoreNameViewCellMe" rowHeight="168" id="9vO-kn-jRm" customClass="HighScoreNameViewCell" customModule="SENIOR_PROJECT" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HighScoreNameViewCellMe" rowHeight="168" id="9vO-kn-jRm" customClass="HighScoreNameViewCell" customModule="Lucky_of_Lose" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="371.5" width="414" height="168"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9vO-kn-jRm" id="ar4-YB-3OM">
@@ -418,7 +418,7 @@
         <!--Gameplay Collection View Controller-->
         <scene sceneID="uU8-cM-Rqa">
             <objects>
-                <viewController id="kbl-Mi-lAr" customClass="GameplayCollectionViewController" customModule="SENIOR_PROJECT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kbl-Mi-lAr" customClass="GameplayCollectionViewController" customModule="Lucky_of_Lose" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lga-5v-7XT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -429,7 +429,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hib-RW-wpp" secondAttribute="height" multiplier="1:1" id="H0S-3K-PJT"/>
                                 </constraints>
-                                <collectionViewLayout key="collectionViewLayout" id="o6j-Vh-8rv" customClass="CircleLayout" customModule="SENIOR_PROJECT" customModuleProvider="target"/>
+                                <collectionViewLayout key="collectionViewLayout" id="o6j-Vh-8rv" customClass="CircleLayout" customModule="Lucky_of_Lose" customModuleProvider="target"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="gameItemsID" id="nrp-W1-Sag">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -609,7 +609,7 @@
         <!--Show Score View Controller-->
         <scene sceneID="rT6-kn-N1d">
             <objects>
-                <viewController id="Km5-Td-lIQ" customClass="ShowScoreViewController" customModule="SENIOR_PROJECT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Km5-Td-lIQ" customClass="ShowScoreViewController" customModule="Lucky_of_Lose" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gge-ab-1oB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -716,7 +716,7 @@
         <!--Settings View Controller-->
         <scene sceneID="efb-4O-Obr">
             <objects>
-                <viewController id="9eS-qU-QOM" customClass="SettingsViewController" customModule="SENIOR_PROJECT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9eS-qU-QOM" customClass="SettingsViewController" customModule="Lucky_of_Lose" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5yG-i2-wz0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -737,6 +737,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="option" translatesAutoresizingMaskIntoConstraints="NO" id="bhp-O1-ipA">
                                 <rect key="frame" x="82" y="15" width="250" height="110"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="dQz-BN-UJQ"/>
                                     <constraint firstAttribute="height" constant="110" id="hvs-5D-Dx7"/>
                                 </constraints>
                             </imageView>
@@ -751,8 +752,8 @@
                                     <action selector="backHandler:" destination="9eS-qU-QOM" eventType="touchUpInside" id="4zZ-Bj-UxN"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WILACHAT version 1.3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0j-0e-WMA">
-                                <rect key="frame" x="209" y="795" width="182" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W version 1.4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0j-0e-WMA">
+                                <rect key="frame" x="278.5" y="795" width="112.5" height="16"/>
                                 <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -770,20 +771,38 @@
                                     <action selector="buyHintHandler:" destination="9eS-qU-QOM" eventType="touchUpInside" id="Drn-qC-6WT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJM-Qg-S0s">
+                                <rect key="frame" x="113.5" y="261.5" width="187" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="xZi-vc-tc6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="25"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="VIEW TUTORIAL">
+                                    <color key="titleColor" red="1" green="1" blue="0.4510916096" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareHandler:" destination="y5F-dL-Gdp" eventType="touchUpInside" id="TYE-i7-oXy"/>
+                                    <action selector="viewTutorialVideoButton:" destination="9eS-qU-QOM" eventType="touchUpInside" id="ucF-vm-hHm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.83921568627450982" blue="0.38431372549019605" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="bhp-O1-ipA" firstAttribute="top" secondItem="41J-rW-30a" secondAttribute="top" constant="15" id="0YD-Hp-4np"/>
-                            <constraint firstItem="bhp-O1-ipA" firstAttribute="leading" secondItem="Yxu-Rh-1J2" secondAttribute="trailing" constant="13" id="2VH-3a-3n9"/>
+                            <constraint firstItem="bhp-O1-ipA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Yxu-Rh-1J2" secondAttribute="trailing" constant="13" id="2VH-3a-3n9"/>
                             <constraint firstItem="Yxu-Rh-1J2" firstAttribute="leading" secondItem="41J-rW-30a" secondAttribute="leading" constant="20" id="EyG-PI-JCH"/>
                             <constraint firstItem="g0j-0e-WMA" firstAttribute="bottom" secondItem="41J-rW-30a" secondAttribute="bottom" constant="3" id="Ira-wS-18a"/>
                             <constraint firstItem="XM6-Zj-aj4" firstAttribute="centerX" secondItem="Mev-Dt-7fW" secondAttribute="centerX" id="RtP-y1-wks"/>
-                            <constraint firstItem="41J-rW-30a" firstAttribute="trailing" secondItem="bhp-O1-ipA" secondAttribute="trailing" constant="82" id="b4E-JY-P3h"/>
+                            <constraint firstItem="Mev-Dt-7fW" firstAttribute="top" secondItem="bJM-Qg-S0s" secondAttribute="bottom" constant="25" id="SCw-42-l81"/>
                             <constraint firstItem="Mev-Dt-7fW" firstAttribute="centerY" secondItem="41J-rW-30a" secondAttribute="centerY" constant="-40" id="jTP-tr-mWU"/>
+                            <constraint firstItem="bJM-Qg-S0s" firstAttribute="centerX" secondItem="Mev-Dt-7fW" secondAttribute="centerX" id="kFb-Ir-tdg"/>
                             <constraint firstItem="Mev-Dt-7fW" firstAttribute="centerX" secondItem="41J-rW-30a" secondAttribute="centerX" id="mOa-zq-3nO"/>
                             <constraint firstItem="XM6-Zj-aj4" firstAttribute="top" secondItem="Mev-Dt-7fW" secondAttribute="bottom" constant="30" id="msf-Yl-Gfh"/>
                             <constraint firstItem="Yxu-Rh-1J2" firstAttribute="top" secondItem="41J-rW-30a" secondAttribute="top" constant="37" id="sH4-Tw-ALC"/>
+                            <constraint firstItem="bhp-O1-ipA" firstAttribute="centerX" secondItem="41J-rW-30a" secondAttribute="centerX" id="x0e-qN-asD"/>
                             <constraint firstItem="41J-rW-30a" firstAttribute="trailing" secondItem="g0j-0e-WMA" secondAttribute="trailing" constant="23" id="yQj-px-BoK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="41J-rW-30a"/>
@@ -800,13 +819,13 @@
         <!--About Us-->
         <scene sceneID="yw0-Um-dVU">
             <objects>
-                <tableViewController id="CcH-Lx-WCh" customClass="aboutUs" customModule="SENIOR_PROJECT" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="CcH-Lx-WCh" customClass="aboutUs" customModule="Lucky_of_Lose" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="O7N-PS-7ae">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="188" id="P7E-zK-7nQ" customClass="nature1Cell" customModule="SENIOR_PROJECT" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="188" id="P7E-zK-7nQ" customClass="nature1Cell" customModule="Lucky_of_Lose" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="55.5" width="414" height="188"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="P7E-zK-7nQ" id="D17-iE-Fic">
@@ -873,7 +892,7 @@
         <!--Animate Background View Controller-->
         <scene sceneID="ceQ-TT-EL0">
             <objects>
-                <viewController storyboardIdentifier="AnimateBackgroundViewController" id="xUq-2h-0KV" customClass="AnimateBackgroundViewController" customModule="SENIOR_PROJECT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AnimateBackgroundViewController" id="xUq-2h-0KV" customClass="AnimateBackgroundViewController" customModule="Lucky_of_Lose" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P8R-AU-JkB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

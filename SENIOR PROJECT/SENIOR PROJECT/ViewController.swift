@@ -12,7 +12,7 @@ import FacebookCore
 import FBSDKCoreKit
 import FBSDKLoginKit
 import FacebookShare
-
+import AVKit
 
 
 class ViewController: UIViewController {
@@ -68,6 +68,25 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 0.8, delay: 0, options: [.autoreverse, .repeat, .allowUserInteraction], animations: {
             self.shareButton.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
         }, completion: nil)
+        
+       let firstTime = UserDefaults.standard.value(forKey: Constants.firstTimeOpenApp)
+        if (firstTime == nil) {
+            let path = Bundle.main.path(forResource: "Lucky or Lose tutorial ver 1", ofType: "mp4")
+            let videoURL = URL(fileURLWithPath: path ?? "")
+            let player = AVPlayer(url: videoURL)
+            let playerViewController = AVPlayerViewController()
+            playerViewController.exitsFullScreenWhenPlaybackEnds = true
+            playerViewController.player = player
+            self.present(playerViewController, animated: true) {
+                playerViewController.player!.play()
+                UserDefaults.standard.set("1", forKey: Constants.firstTimeOpenApp)
+                UserDefaults.standard.synchronize()
+            }
+            
+        }
+        
+        
+        
     }
 
     
@@ -118,3 +137,4 @@ extension ViewController: LoginButtonDelegate{
     
     
 }
+

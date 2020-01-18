@@ -88,7 +88,7 @@ class ShowScoreViewController: UIViewController {
         #if DEBUG
              interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
         #else
-       interstitial  = GADInterstitial(adUnitID: AdsId)
+       interstitial  = GADInterstitial(adUnitID: "ca-app-pub-5621209397277761/1026485871")
         #endif
         interstitial.delegate = self
                let request = GADRequest()
